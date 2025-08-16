@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react";
+import { Table, TableBody, TableCell, TableRow } from "flowbite-react";
 export function ComTable(){
     return(
     <>

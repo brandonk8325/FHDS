@@ -4,8 +4,6 @@ Phone Number
 Make email and phone number links
 */
 
-import { darkThemeToggleTheme } from "flowbite-react"
-import { DarkGreen, GoldText } from "../variables"
 
 function Footer(){
     
@@ -18,8 +16,8 @@ function Footer(){
                             <div className="flex-row">
                                 <p className="text-white">Furever Home Dog Sanctuary</p>
                                 <p className="text-white">Richmond, Illinois</p>
-                                <p className={`${GoldText} brightness-150`}>info@FHDSmail.org</p>
-                                <p className={`${GoldText} brightness-150`}>+1 773-520-3568</p>
+                                <p className={`text-gold brightness-150`}>info@FHDSmail.org</p>
+                                <p className={`text-gold brightness-150`}>+1 773-520-3568</p>
                             </div>
                         </div>
                         <div className="w-150 flex justify-start">
@@ -28,13 +26,13 @@ function Footer(){
                                 <div className="flex flex-row bg-* ">
                                     <div className="join border-0 shadow-0 h-10">
                                         <div>
-                                            <label className={`input validator join-item border-[#76947A]/70  shadow-0 ${DarkGreen}`}>
+                                            <label className={`input validator join-item border-[#76947A]/70  shadow-0 bg-darkgreen`}>
                                             <svg className="h-[1em] opacity-100 border-0 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="white"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g> </svg>
                                             <input type="email" className="placeholder-white/70 focus:outline-none focus:ring-0 focus:border-transparent" placeholder="mail@site.com" required />
                                             </label>
                                             <div className="validator-hint hidden ">Enter valid email address</div>
                                         </div>
-                                        <button className={`btn border-1 border-[#76947A]/70 focus:h-full  h-full join-item ${DarkGreen} border-0 shadow-none`}>Join</button>
+                                        <button className={`btn border-1 border-[#76947A]/70 focus:h-full  h-full join-item bg-darkgreen border-0 shadow-none`}>Join</button>
                                         </div>
                                 </div>
                             </form>

@@ -3,8 +3,7 @@ import { AboutCard } from "../Components/about_card"
 import { ComTable } from "../Components/committee_table"
 import Navbar from "../Components/Navbar"
 import Timeline from "../Components/timeline"
-import { Beige, navSpacing } from "../variables"
-import { Table, TableBody, TableCell, TableHead, TableHeadCell, TableRow } from "flowbite-react";
+import { Table, TableBody, TableCell, TableRow } from "flowbite-react";
 
 
 function About(){

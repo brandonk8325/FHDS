@@ -1,7 +1,5 @@
 
-import { Card } from "flowbite-react";
-
-export function EventCard({title = "title", description = "description", image = "../static/dog.jpg", link = ""}) {
+export function EventCard({title = "title", description = "description", }) {
   return (
     <div className= {`max-w-3xs border-1 border-black rounded-lg bg-darkgreen`}>
         <div className="p-5">

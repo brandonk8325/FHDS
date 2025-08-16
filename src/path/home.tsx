@@ -1,7 +1,5 @@
 import Navbar from "../Components/Navbar"
-import Timeline from "../Components/timeline"
 import AbtTimeline from "../Components/about_timeline"
-import { Beige, ButtonClr, DarkGreen, navHeight,  } from "../variables"
 import { Link } from "react-router-dom"
 function Home(){
 return(

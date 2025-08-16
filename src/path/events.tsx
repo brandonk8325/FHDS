@@ -1,7 +1,4 @@
-import { BlankCard } from "../Components/blank_card"
-import { EventCard } from "../Components/events_card"
 import Navbar from "../Components/Navbar"
-import { navSpacing } from "../variables"
 
 function Events(){
     return(

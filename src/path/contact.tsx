@@ -1,9 +1,6 @@
-import { Button, Textarea } from "flowbite-react";
 import { EmailForm } from "../Components/email_form";
 import { PhoneForm } from "../Components/phone_form";
 import Navbar from "../Components/Navbar";
-import { ButtonClr, DarkGreen, GoldText, navSpacing, } from "../variables";
-
 function Contact(){
     return(
         <>
@@ -12,7 +9,7 @@ function Contact(){
                 <Navbar/>
             </div>
                 <form className={`pt-nav-height flex flex-col justify-evenly text-black`}>
-                    <div className={`${DarkGreen} px-15 py-8 rounded-4xl w-fit`}>
+                    <div className={`bg-darkgreen px-15 py-8 rounded-4xl w-fit`}>
                         <h1 className="text-3xl pb-2 text-white">Contact Us</h1>
                         <div >
                             <fieldset className="fieldset">

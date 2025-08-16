@@ -1,10 +1,7 @@
 
-import { Card } from "flowbite-react";
-import { DarkGreen } from "../variables";
-
 export function AboutCard({name = "Name", descriptor = "descriptor", image = "../static/dog.jpg", company = ""}) {
   return (
-    <div className= {`max-w-3xs border-1 border-black rounded-lg ${DarkGreen}`}>
+    <div className= {`max-w-3xs border-1 border-black rounded-lg bg-darkgreen`}>
         <img className="rounded-t-lg w-3xs" src={image} alt="" /> 
       <div className="p-5">
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{name}</h5> 
