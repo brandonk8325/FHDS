@@ -43,11 +43,11 @@ function Navbar({page=""}) {
         <nav className={`${navColor} ${navSize} z-90 items-center fixed w-full top-0 start-0 border-b border-gray-200 dark:border-gray-600`}>
         <div className={` h-full max-w-screen-xl flex flex-wrap items-center justify-between m-auto z-90`}>
             <Link to="/" className={`flex items-center space-x-3`}>
-                <img src="../static/navbar_logo.png" className={imgSize} alt="Logo" />
+                <img src="/static/navbar_logo.png" className={imgSize} alt="Logo" />
             </Link>
             <div className="flex invisible md:order-2 space-x-3 md:space-x-0 ">
                 <Link to="/" className={`flex items-center space-x-3`}>
-                    <img src="../static/navbar_logo.png" className={imgSize} alt="Logo" />
+                    <img src="/static/navbar_logo.png" className={imgSize} alt="Logo" />
                 </Link>
             </div>
             <div className="flex items-center" id="navbar-sticky">
