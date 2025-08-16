@@ -65,7 +65,7 @@ return(
       </div>
       <div className='flex flex-row items-center justify-evenly pt-10'>
         <div className='px-10'>
-          <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="/static/old_building.jpg" alt="image description" />
+          <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="/static/Old_Building.jpg" alt="image description" />
         </div>
         <div className='px-10'>
           <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="/static/new_building.png" alt="image description" />
