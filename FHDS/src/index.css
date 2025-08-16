@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "daisyui";
+@theme {
+  --color-darkgreen: #1C4436;
+  --color-gold: #a37521;
+  --color-eggshell: #f6eee3;
+  --spacing-nav-height: 5rem;
+}
