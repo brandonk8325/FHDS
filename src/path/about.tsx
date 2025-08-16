@@ -14,7 +14,7 @@ function About(){
                 <Navbar/>
                 <div className="pt-nav-height justify-evenly items-center flex flex-row w-full h-full">
                 <div className=''>
-                    <img className="w-150 rounded-lg" src="../static/dog.jpg" alt="image description" />
+                    <img className="w-150 rounded-lg" src="/static/dog.jpg" alt="image description" />
                 </div>
                 <div className='w-150 '>
                     <h3 className="text-3xl text-center font-bold dark:text-black pb-10 ">About Us</h3>
@@ -29,7 +29,7 @@ function About(){
                     <div className="-translate-y-3"><Timeline></Timeline></div>
                 </div>
                 <div className=''>
-                    <img className="w-130 rounded-lg" src="../static/Our_Story.jpeg" alt="image description" />
+                    <img className="w-130 rounded-lg" src="/static/Our_Story.jpeg" alt="image description" />
                 </div>
             </div>
             <div className="flex flex-row py-20 items-center justify-evenly w-full bg-[#b7c3be]">
@@ -39,18 +39,18 @@ function About(){
             <h1 className={`text-black text-6xl font-serif font-bold py-10`}>Our Team</h1>
             <h1 className="text-black text-3xl font-bold">Board Members</h1>
             <div className=' py-10 flex flex-row items-center justify-evenly w-full px-10'>
-                <AboutCard name = "David Kerpel" image = "../static/David_Kerpel.jpeg" company="Law Offices of David S. Kerpel" descriptor = "President"/>
-                <AboutCard name = "Erin Kerpel" image = "../static/Erin_Kerpel.jpeg" company="Gratitude Generation" descriptor = "Vice-President"/>
-                <AboutCard name = "Ryan Geudel" image = "../static/Ryan_Geudel.jpg" company = "CJBS" descriptor = "Treasurer"/>
-                <AboutCard name = "Abhay Kanada" image = "../static/Abhay_Kanada.jpg" company="Big Ten Network" descriptor = "Director of Technology"/>
-                <AboutCard name = "Zach Nesbit" image = "../static/dog.jpg" company = "K9 Resorts"/>
+                <AboutCard name = "David Kerpel" image = "/static/David_Kerpel.jpeg" company="Law Offices of David S. Kerpel" descriptor = "President"/>
+                <AboutCard name = "Erin Kerpel" image = "/static/Erin_Kerpel.jpeg" company="Gratitude Generation" descriptor = "Vice-President"/>
+                <AboutCard name = "Ryan Geudel" image = "/static/Ryan_Geudel.jpg" company = "CJBS" descriptor = "Treasurer"/>
+                <AboutCard name = "Abhay Kanada" image = "/static/Abhay_Kanada.jpg" company="Big Ten Network" descriptor = "Director of Technology"/>
+                <AboutCard name = "Zach Nesbit" image = "/static/dog.jpg" company = "K9 Resorts"/>
             </div>
             <h1 className="text-black text-3xl font-bold">Chair People</h1>
             <div className=' py-10 flex flex-row items-center justify-evenly w-full px-10'>
-                <AboutCard name = "Heidi Benedict" image = "../static/Heidi_Sparacino.png" descriptor = "Construction Chair"/>
-                <AboutCard name = "Irene Benedict" image = "../static/Irene_Benedict.jpg" descriptor = "Social Media Chair"/>
-                <AboutCard name = "Robin Torch" image = "../static/Robin_Torch.jpeg" descriptor = "Outreach Chair"/>
-                <AboutCard name = "Brandon Kerpel" image = "../static/dog.jpg" descriptor = "Website Manager Chair"/>
+                <AboutCard name = "Heidi Benedict" image = "/static/Heidi_Sparacino.png" descriptor = "Construction Chair"/>
+                <AboutCard name = "Irene Benedict" image = "/static/Irene_Benedict.jpg" descriptor = "Social Media Chair"/>
+                <AboutCard name = "Robin Torch" image = "/static/Robin_Torch.jpeg" descriptor = "Outreach Chair"/>
+                <AboutCard name = "Brandon Kerpel" image = "/static/dog.jpg" descriptor = "Website Manager Chair"/>
             </div>
             <h1 className="text-black text-3xl font-bold pb-5">Committee Members</h1>
             <ComTable/>

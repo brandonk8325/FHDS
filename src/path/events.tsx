@@ -7,8 +7,8 @@ function Events(){
             <Navbar/>
             <div className={`pt-nav-height`}>
                 <div className="py-10 flex flex-row w-300 gap-20">
-                    <img className="w-140" src = "../static/Event_1.jpeg"/>
-                    <img  className="w-140" src = "../static/Event_2.png"/>
+                    <img className="w-140" src = "/static/Event_1.jpeg"/>
+                    <img  className="w-140" src = "/static/Event_2.png"/>
                 </div>
             </div>
         </div>

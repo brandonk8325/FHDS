@@ -36,13 +36,13 @@ return(
     <div className="flex flex-col items-center justify-center bg-[#b7c3be] w-full">
     <h1 className=" text-black font-bold py-5 text-3xl">Upcoming Events</h1>
     <div className={`flex flex-row pb-10 gap-30`}>
-        <img className="h-150" src = "../static/Event_1.jpeg"/>
-        <img className="h-150" src = "../static/Event_2.png"/>
+        <img className="h-150" src = "/static/Event_1.jpeg"/>
+        <img className="h-150" src = "/static/Event_2.png"/>
     </div>
     </div>
     <div className={`flex flex-row py-15 -z-10 items-center justify-evenly bg-[#f6eee3]`}>
       <div className=''>
-        <img className="h-auto max-w-lg rounded-lg " src="../static/dog.jpg" alt="image description" />
+        <img className="h-auto max-w-lg rounded-lg " src="/static/dog.jpg" alt="image description" />
       </div>
       <div className='flex flex-col w-150 text-black items-center'>
         <p className='text-center text-lg pt-5 pb-10'>Furever Home Dog Sanctuary (FHDS) is a non-profit organization that will provide second chances to dogs in need.  By providing elevated care, behavior modification and increased socialization and stimulation, FHDS will provide dogs who have been overlooked, the opportunity to thrive.  Whether the dogs that we support are on the path to adoption or remain with us long-term, every dog will experience what it means to be cherished and cared for, every single day.</p>
@@ -65,10 +65,10 @@ return(
       </div>
       <div className='flex flex-row items-center justify-evenly pt-10'>
         <div className='px-10'>
-          <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="../static/old_building.jpg" alt="image description" />
+          <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="/static/old_building.jpg" alt="image description" />
         </div>
         <div className='px-10'>
-          <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="../static/new_building.png" alt="image description" />
+          <img className=" max-w-lg rounded-lg h-80 w-180 border-2 border-black" src="/static/new_building.png" alt="image description" />
         </div>
       </div>
     </div>
