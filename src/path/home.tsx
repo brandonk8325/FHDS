@@ -37,7 +37,6 @@ return(
     </div>
     <div className="flex flex-col items-center justify-center bg-[#b7c3be] w-full">
     <h1 className=" text-black font-bold py-5 text-3xl">Upcoming Events</h1>
-    
     <div className={`flex flex-row pb-10 gap-30`}>
         <img className="h-150" src = "../static/Event_1.jpeg"/>
         <img className="h-150" src = "../static/Event_2.png"/>
