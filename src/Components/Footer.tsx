@@ -12,7 +12,7 @@ function Footer(){
             <div className={`flex flex-col py-10 bg-darkgreen w-full`} >
                 <div className="flex flex-col md:flex-row items-center justify-center w-full">
                     <div className="flex justify-center gap-5 flex-col md:flex-row items-center lg:gap-60 md:gap-20">
-                        <div className="lg:w-150 md:w-full flex justify-end">
+                        <div className="lg:w-150 md:w-full flex justify-end text-center md:text-left">
                             <div className="">
                                 <p className="text-white">Furever Home Dog Sanctuary</p>
                                 <p className="text-white">Richmond, Illinois</p>
@@ -20,10 +20,10 @@ function Footer(){
                                 <p className={`text-gold brightness-150`}>+1 773-520-3568</p>
                             </div>
                         </div>
-                        <div className="lg:w-150 md:w-full flex justify-start">
+                        <div className="lg:w-150 md:w-full flex justify-start text-center md:text-left">
                             <form>
-                                <label htmlFor="input-group-1" className="border-0 shadow-0  text-sm font-medium  dark:text-white bg-*">Join our Newsletter</label>
-                                <div className="flex flex-col md:flex-row bg-* ">
+                                <label htmlFor="input-group-1" className="border-0 shadow-0  text-sm font-medium  dark:text-white bg-*  ">Join our Newsletter</label>
+                                <div className="flex flex-col md:flex-row bg-*">
                                     <div className="join border-0 shadow-0 h-10">
                                         <div>
                                             <label className={`input validator join-item border-[#76947A]/70  shadow-0 bg-darkgreen`}>

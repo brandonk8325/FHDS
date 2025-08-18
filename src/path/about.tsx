@@ -1,7 +1,7 @@
 //Our team
 import { AboutCard } from "../Components/about_card"
 import { ComTable } from "../Components/committee_table"
-import Navbar from "../Components/Navbar"
+import {Component} from "../Components/Navbar"
 import Timeline from "../Components/timeline"
 import { Table, TableBody, TableCell, TableRow } from "flowbite-react";
 
@@ -11,7 +11,7 @@ function About(){
     <>
         <div className=" flex flex-col items-center justify-center bg-[#f6eee3] pb-10">
             <div className="lg:h-screen md:p-10 items-center justify-center w-full bg-[#b7c3be]">
-                <Navbar/>
+                <Component/>
                 <div className="pt-nav-height justify-evenly items-center flex lg:flex-row w-full h-full md:gap-20 md:flex-col-reverse">
                 <div className=''>
                     <img className="w-150 rounded-lg" src="/static/dog.jpg" alt="image description" />

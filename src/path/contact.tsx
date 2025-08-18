@@ -1,12 +1,12 @@
 import { EmailForm } from "../Components/email_form";
 import { PhoneForm } from "../Components/phone_form";
-import Navbar from "../Components/Navbar";
+import {Component} from "../Components/Navbar";
 function Contact(){
     return(
         <>
         <div className={`flex flex-col items-center justify-center  py-10 lg:h-screen bg-[#f6eee3]`} >
             <div>
-                <Navbar/>
+                <Component/>
             </div>
             <div className="md:scale-130 md:py-40 lg:scale-100 lg:py-0">
                 <div className="pt-nav-height ">

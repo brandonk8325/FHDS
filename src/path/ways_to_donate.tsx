@@ -1,12 +1,12 @@
 import { BlankCard } from "../Components/blank_card";
 import { EventCard } from "../Components/events_card";
-import Navbar from "../Components/Navbar";
+import {Component} from "../Components/Navbar";
 
 export default function WaysToDonate(){
     return(
         <>
         <div className="flex flex-col justify-center items-center w-full bg-eggshell">
-            <Navbar/>
+            <Component/>
             <div className={`pt-nav-height flex flex-col w-300 `}>
                 <div className="py-10 flex-row flex justify-evenly ">
                     <EventCard title="Zelle" description="Please send your donation to info@fhdsmail.org"/>

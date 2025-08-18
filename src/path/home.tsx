@@ -1,4 +1,4 @@
-import Navbar from "../Components/Navbar"
+import {Component} from "../Components/Navbar"
 import AbtTimeline from "../Components/about_timeline"
 import { Link } from "react-router-dom"
 function Home(){
@@ -10,7 +10,7 @@ return(
   before:z-0`}>
       <div className="">
         <div className="fixed top-0 left-0 w-full z-50">
-          <Navbar page="home" />
+          <Component page = "home"/>
         </div>
         <div className="pt-60 flex flex-col items-center justify-center relative z-10">
           <div className='pt-5'>
@@ -34,14 +34,14 @@ return(
       </div>
     </div>
     <div className="flex flex-col items-center justify-center bg-[#b7c3be] w-full">
-    <h1 className=" text-black font-bold py-8 text-center lg:text-4xl text-6xl">Upcoming Events</h1>
+    <h1 className=" text-black font-bold pt-10 pb-8 text-center lg:text-4xl text-6xl font-serif">Upcoming Events</h1>
     <div className={`flex lg:flex-row pt-5 pb-10 lg:gap-30 flex-col gap-10`}>
         <img className="w-full px-5 md:w-auto md:px-0 md:h-150" src = "/static/Event_1.jpeg"/>
         <img className="w-full px-5 md:w-auto md:px-0 md:h-150" src = "/static/Event_2.png"/>
     </div>
     </div>
     <div className={`flex lg:flex-row py-15 -z-10 items-center justify-evenly bg-[#f6eee3] flex-col gap-10`}>
-      <div className=''>
+      <div className='px-5 md:px-0'>
         <img className="md:w-lg w-sm rounded-lg " src="/static/dog.jpg" alt="image description" />
       </div>
       <div className='flex flex-col w-90 md:w-150 text-black items-center'>
@@ -55,13 +55,13 @@ return(
         </Link>
       </div>
     </div>
-    <div className={`flex flex-col pt-15 pb-15 items-center  bg-[#b7c3be]`}>
+    <div className={`flex flex-col pt-10 pb-15 items-center  bg-[#b7c3be]`}>
       <div className='flex flex-col items-center  text-black z-5 w-full'>
-        <h3 className="text-4xl text-center font-bold ">What We're Up To</h3>
+        <h3 className="text-5xl text-center font-bold font-serif px-5">What We're Up To</h3>
         <div className=" w-90 md:w-180">
           <p className='pt-5 pb-0 text-lg text-center'>We are in the process of turning the property we purchased into the facility we have designed. Our General Contractor has submitted our plans to the McHenry County board to be granted construction permits.  Once we receive our permits we will be able to begin construction on our brand new, state-of-the-art 19,000 square-foot sanctuary that we estimate will be completed in the summer of 2026.</p>
         </div>
-        <div className="md:w-10 md:items-start md:-translate-x-230 lg:w-auto lg:items-center lg:translate-x-0">
+        <div className="w-10 items-start -translate-x-230 lg:w-auto lg:items-center lg:translate-x-0">
           <AbtTimeline/>
         </div>
       </div>

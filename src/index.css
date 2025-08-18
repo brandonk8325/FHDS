@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
 @plugin "daisyui";
+
 @theme {
   --color-darkgreen: #1C4436;
   --color-gold: #a37521;
