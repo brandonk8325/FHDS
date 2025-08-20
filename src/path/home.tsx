@@ -1,6 +1,7 @@
 import {Component} from "../Components/Navbar"
 import AbtTimeline from "../Components/about_timeline"
 import { Link } from "react-router-dom"
+import Timeline from "../Components/timeline"
 function Home(){
 return(
 <>
@@ -22,9 +23,9 @@ return(
           <div className='flex flex-row pt-15'>
             <div className='px-10'>
               <Link to="/donate">
-              <button className={` inline-flex items-center justify-center mb-2 me-2 overflow-hidden text-md font-medium text-white rounded-lg  hover:text-white `}>
-                  <span className={` px-20 py-5 transition-all ease-in duration-175 border-4 border-gold hover:text-lg hover:cursor-pointers rounded-lg`}>
-                  Donate
+              <button className={`bg-gold md:bg-transparent  inline-flex items-center justify-center mb-2 me-2 overflow-hidden md:text-md font-medium text-white rounded-lg  hover:text-white `}>
+                  <span className={`px-15 md:px-20 py-5 tracking-wider transition-all ease-in duration-175 border-6 border-gold hover:text-xl text-2xl md:text-lg hover:cursor-pointers rounded-lg`}>
+                  <p className=" ">Donate</p>
                 </span>
               </button>
               </Link>
@@ -34,7 +35,7 @@ return(
       </div>
     </div>
     <div className="flex flex-col items-center justify-center bg-[#b7c3be] w-full">
-    <h1 className=" text-black font-bold pt-10 pb-8 text-center lg:text-4xl text-6xl font-serif">Upcoming Events</h1>
+    <h3 className=" text-black font-bold pt-10 pb-8 text-center lg:text-4xl text-6xl font-serif">Upcoming Events</h3>
     <div className={`flex lg:flex-row pt-5 pb-10 lg:gap-30 flex-col gap-10`}>
         <img className="w-full px-5 md:w-auto md:px-0 md:h-150" src = "/static/Event_1.jpeg"/>
         <img className="w-full px-5 md:w-auto md:px-0 md:h-150" src = "/static/Event_2.png"/>
@@ -42,7 +43,7 @@ return(
     </div>
     <div className={`flex lg:flex-row py-15 -z-10 items-center justify-evenly bg-[#f6eee3] flex-col gap-10`}>
       <div className='px-5 md:px-0'>
-        <img className="md:w-lg w-sm rounded-lg " src="/static/dog.jpg" alt="image description" />
+        <img className="md:w-2xl w-sm rounded-lg " src="/static/About_Us.jpeg" alt="image description" />
       </div>
       <div className='flex flex-col w-90 md:w-150 text-black items-center'>
         <p className='text-center text-lg pt-5 pb-10'>Furever Home Dog Sanctuary (FHDS) is a non-profit organization that will provide second chances to dogs in need.  By providing elevated care, behavior modification and increased socialization and stimulation, FHDS will provide dogs who have been overlooked, the opportunity to thrive.  Whether the dogs that we support are on the path to adoption or remain with us long-term, every dog will experience what it means to be cherished and cared for, every single day.</p>
@@ -57,20 +58,29 @@ return(
     </div>
     <div className={`flex flex-col pt-10 pb-15 items-center  bg-[#b7c3be]`}>
       <div className='flex flex-col items-center  text-black z-5 w-full'>
-        <h3 className="text-5xl text-center font-bold font-serif px-5">What We're Up To</h3>
+        <h3 className="text-4xl text-center font-bold font-serif px-5">What We're Up To</h3>
         <div className=" w-90 md:w-180">
-          <p className='pt-5 pb-0 text-lg text-center'>We are in the process of turning the property we purchased into the facility we have designed. Our General Contractor has submitted our plans to the McHenry County board to be granted construction permits.  Once we receive our permits we will be able to begin construction on our brand new, state-of-the-art 19,000 square-foot sanctuary that we estimate will be completed in the summer of 2026.</p>
+          <p className='pt-5 pb-0 text-lg text-center'>Our General Contractor has submitted architectural and engineer plans to McHenry County for construction permit approval.  Once we obtain our construction permits, we will start the construction process to build our brand new, state-of-the-art 19,000-square-foot building, which we estimate will be completed by summer 2026.</p>
         </div>
-        <div className="w-10 items-start -translate-x-230 lg:w-auto lg:items-center lg:translate-x-0">
-          <AbtTimeline/>
-        </div>
+        <div className="pt-5 w-full flex justify-center px-8">
+  <AbtTimeline
+    steps={[
+      { year: "2022", text: "Became a non-profit" },
+      { year: "2023", text: "Purchased 6-acres to become future home of FHDS" },
+      { year: "2024", text: "Completed architectural and engineering plans" },
+      { year: "2025", text: "Selected contractor and obtained approval for permits" },
+    ]}
+    stepWidth="20rem"
+  />
+</div>
+
       </div>
       <div className='flex lg:flex-row items-center justify-evenly pt-10 flex-col gap-10'>
-        <div className='px-10'>
-          <img className=" rounded-lg w-90 h-40 md:h-80 md:w-180 border-2 border-black" src="/static/Old_Building.jpg" alt="image description" />
+        <div className=''>
+          <img className=" rounded-lg w-80 h-40 md:h-80 md:w-auto border-2 border-black" src="/static/Old_Building.jpg" alt="image description" />
         </div>
-        <div className='px-10'>
-          <img className="rounded-lg w-90 h-40 md:h-80 md:w-180 border-2 border-black" src="/static/new_building.png" alt="image description" />
+        <div className=''>
+          <img className="rounded-lg w-80 h-40 md:h-80 md:w-auto border-2 border-black" src="/static/new_building.png" alt="image description" />
         </div>
       </div>
     </div>

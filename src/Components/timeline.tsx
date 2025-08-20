@@ -18,7 +18,7 @@ function Timeline(){
                     />
                 </svg>
                 </div>
-                <div className="timeline-end timeline-box text-center">Became a <br/> non-profit</div>
+                <div className="timeline-end timeline-box text-center text-white">Became a <br/> non-profit</div>
                 <hr />
             </li>
             <li className="">
@@ -38,7 +38,7 @@ function Timeline(){
                     />
                 </svg>
                 </div>
-                <div className="timeline-end timeline-box text-center">Purchased 6-acres to <br/>become future home of FHDS</div>
+                <div className="timeline-end timeline-box text-center text-white">Purchased 6-acres to <br/>become future home of FHDS</div>
                 <hr />
             </li>
             <li className="">
@@ -59,7 +59,7 @@ function Timeline(){
                 </svg>
                 </div>
                 <hr />
-                <div className="timeline-end timeline-box text-center">Completed architectural <br/> and engineering plans</div>
+                <div className="timeline-end timeline-box text-center text-white">Completed architectural <br/> and engineering plans</div>
             </li>
             <li className="">
                 <hr />
@@ -79,7 +79,7 @@ function Timeline(){
                 </svg>
                 </div>
                 <hr />
-                <div className="timeline-end timeline-box text-center">Selected contractor and <br/>obtained approval for permits</div>
+                <div className="timeline-end timeline-box text-center text-white">Selected contractor and <br/>obtained approval for permits</div>
             </li>
         </ul>
         </>

@@ -4,7 +4,7 @@ export function PhoneForm(){
         <div className='flex flex-row items-center justify-evenly w-full'>
             <fieldset className="fieldset">
                 <legend className="fieldset-legend text-white">Your Phone Number *</legend>
-                <label className="input validator bg-[#f6eee3] border-neutral-400 border-1">
+                <label className="input validator bg-[#f6eee3] border-neutral-400 border-1 ">
                     <svg className="h-[1em] " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                         <g fill="none">
                         <path
@@ -21,7 +21,7 @@ export function PhoneForm(){
                     </svg>
                     <input
                         type="tel"
-                        className="tabular-nums border-l-1 border-neutral-400"
+                        className="tabular-nums border-l-1 border-neutral-400 focus:ring-0"
                         required
                         placeholder="Phone"
                         pattern="[0-9]*"

@@ -1,123 +1,105 @@
 //Our team
 import { AboutCard } from "../Components/about_card"
+import AbtTimeline from "../Components/about_timeline";
+import { CardsGrid } from "../Components/card_grid";
 import { ComTable } from "../Components/committee_table"
 import {Component} from "../Components/Navbar"
 import Timeline from "../Components/timeline"
 import { Table, TableBody, TableCell, TableRow } from "flowbite-react";
+import { useState, useEffect } from "react";
 
 
 function About(){
+
+    const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // run once on mount and whenever screen is resized
+    const check = () => setIsMobile(window.innerWidth < 768); // Tailwind md breakpoint
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
     return(
     <>
         <div className=" flex flex-col items-center justify-center bg-[#f6eee3] pb-10">
             <div className="lg:h-screen md:p-10 items-center justify-center w-full bg-[#b7c3be]">
                 <Component/>
-                <div className="pt-nav-height justify-evenly items-center flex lg:flex-row w-full h-full md:gap-20 md:flex-col-reverse">
-                <div className=''>
-                    <img className="w-150 rounded-lg" src="/static/dog.jpg" alt="image description" />
+                <div className="pt-nav-height justify-evenly items-center flex lg:flex-row w-full h-full md:gap-20 flex-col-reverse">
+                <div className='px-5 py-10 md:px-0 md:py-0'>
+                    <img className=" w-full md:w-150 rounded-lg " src="/static/About_Us.jpg" alt="image description" />
                 </div>
-                <div className='w-150 '>
-                    <h3 className="text-3xl text-center font-bold dark:text-black pb-10 ">About Us</h3>
-                    <p className='text-center text-black'>Furever Home Dog Sanctuary (FHDS) is one of the few sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  FHDS has behaviorists and trainers that will help provide the dogs with skills that will increase their chances of getting adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they were previously getting.  FHDS will meet each dog where they are, to ensure that they are thriving and living a beautiful life. </p>
+                <div className='w-full md:w-150 '>
+                    <h3 className="text-3xl text-center font-bold dark:text-black pb-10 pt-10 md:pt-10">About Us</h3>
+                    <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  FHDS has behaviorists and trainers that will help provide the dogs with skills that will increase their chances of getting adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they were previously getting.  FHDS will meet each dog where they are, to ensure that they are thriving and living a beautiful life. </p>
                 </div>
                 </div>
             </div>
-            <div className='flex lg:flex-row ;g"py-10 items-center justify-evenly w-full bg-[#f6eee3] md:p-10 md:gap-20 md:flex-col'>
-                <div className='w-150 items-center justify-between'>
+            <div className='flex lg:flex-row pb-10 md:py-10 items-center justify-evenly w-full bg-[#f6eee3] md:p-10 md:gap-20 flex-col'>
+                <div className='w-full md:w-150 items-center justify-between'>
                     <h3 className="text-3xl text-center font-bold py-10 dark:text-black">Our Story</h3>
-                    <p className='text-center text-black'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
-                    <div className="-translate-y-3"><Timeline></Timeline></div>
+                    <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
+                    <div className="-translate-y-3 pt-5 md:pt-10 px-5 md:px-5">
+                        <AbtTimeline steps={[
+                            { year: "2022", text: "Became a non-profit" },
+                            { year: "2023", text: "Purchased 6-acres to become future home of FHDS" },
+                            { year: "2024", text: "Completed architectural and engineering plans" },
+                            { year: "2025", text: "Selected contractor and obtained approval for permits" },
+                        ]}/>
+                    </div>
                 </div>
-                <div className=''>
-                    <img className="w-130 rounded-lg" src="/static/Our_Story.jpeg" alt="image description" />
+                <div className='px-5 md:px-0'>
+                    <img className="w-full md:w-130 rounded-2xl" src="/static/Our_Story.jpeg" alt="image description" />
                 </div>
             </div>
-            <div className="flex flex-row py-20 items-center justify-evenly w-full bg-[#b7c3be]">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/9elqncC6oNs?si=urixhp-Bi_5z1wnd" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+            <div className="flex flex-row py-20 items-center justify-evenly w-full bg-[#b7c3be] px-5 md:px-0 ">
+                <iframe width="560" height="315" className="rounded-2xl md:rounded-none" src="https://www.youtube.com/embed/9elqncC6oNs?si=urixhp-Bi_5z1wnd" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
             </div>
             <hr className="border-1 w-full border-black"></hr>
             <h1 className={`text-black text-6xl font-serif font-bold py-10`}>Our Team</h1>
             <h1 className="text-black text-3xl font-bold">Board Members</h1>
-            <div className=' py-10 flex flex-row items-center justify-evenly w-full px-10 md:gap-5'>
-                <AboutCard name = "David Kerpel" image = "/static/David_Kerpel.jpeg" company="Law Offices of David S. Kerpel" descriptor = "President"/>
-                <AboutCard name = "Erin Kerpel" image = "/static/Erin_Kerpel.jpeg" company="Gratitude Generation" descriptor = "Vice-President"/>
-                <AboutCard name = "Ryan Geudel" image = "/static/Ryan_Geudel.jpg" company = "CJBS" descriptor = "Treasurer"/>
-                <AboutCard name = "Abhay Kanada" image = "/static/Abhay_Kanada.jpg" company="Big Ten Network" descriptor = "Director of Technology"/>
-                <AboutCard name = "Zach Nesbit" image = "/static/dog.jpg" company = "K9 Resorts"/>
+            <div className="w-full">
+                <CardsGrid cards={
+                [{ name: "David Kerpel", image: "/static/David_Kerpel.jpeg", company: "Law Offices of David S. Kerpel", descriptor: "President" },
+                { name: "Erin Kerpel", image: "/static/Erin_Kerpel.jpeg", company: "Gratitude Generation", descriptor: "Vice-President" },
+                { name: "Ryan Geudel", image: "/static/Ryan_Geudel.jpg", company: "CJBS", descriptor: "Treasurer" },
+                { name: "Abhay Kanada", image: "/static/Abhay_Kanada.jpg", company: "Big Ten Network", descriptor: "Director of Technology" },
+                { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "" },
+                ]} 
+                perRow={5} className="w-full justify-evenly"/>
             </div>
             <h1 className="text-black text-3xl font-bold">Chair People</h1>
-            <div className=' py-10 flex flex-row items-center justify-evenly w-full px-10 md:gap-5'>
-                <AboutCard name = "Heidi Benedict" image = "/static/Heidi_Sparacino.png" descriptor = "Construction Chair"/>
-                <AboutCard name = "Irene Benedict" image = "/static/Irene_Benedict.jpg" descriptor = "Social Media Chair"/>
-                <AboutCard name = "Robin Torch" image = "/static/Robin_Torch.jpeg" descriptor = "Outreach Chair"/>
-                <AboutCard name = "Brandon Kerpel" image = "/static/dog.jpg" descriptor = "Website Manager Chair"/>
-            </div>
+            <CardsGrid cards={
+                [{ name: "Heidi Sparacino", image: "/static/Heidi_Sparacino.png", descriptor: "Construction Chair" },
+                { name: "Irene Benedict", image: "/static/Irene_Benedict.jpg",  descriptor: "Social Media Chair" },
+                { name: "Robin Torch", image: "/static/Robin_Torch.jpeg", descriptor: "Outreach Chair" },
+                { name: "Brandon Kerpel", image: "/static/Brandon_Kerpel.jpg",  descriptor: "Website Manager Chair" },
+                ]} 
+            perRow={4} className="w-full justify-evenly"/>
             <h1 className="text-black text-3xl font-bold pb-5 ">Committee Members</h1>
-            <div className="md:w-150 lg:w-auto">
-                <ComTable/>
+            <div className="md:w-150 lg:w-auto px-5 md:px-0">
+                <ComTable  names={[
+                    "Angela Redman","Bonnie Kanner","Jenny DuHamel","Rachel Bankier","Linsey Patten","Nicole Moritz",
+                    "John Wilkenson","Lynn Caroll","Peg Morrisroe","Adrienne Driessen","Hannah Wolod","Amanda Alvarez",
+                    "Tom Van Winkle",   "Brittany Eisenberg", "Susie Cutler", "Joe Cohen", "Michele Cochara", "Jordin Jewel", 
+                    "Andy Frankel",  "Johnny Guarnieri", "Brian Thibaut", "J.P. Veillon",  "Sheila Collins", "Kelly Cooper", 
+                    "Kelly Collins", "Lindsey Petlak", "Chase Rowars",  "Jeff Steybe", "Christine Mihovilovich", "Mike Lee",
+                    "Lisa Curry", "Erika Jones", "Lauren Schwartz", "Dawne Pohlman", "Sue Violet"
+                    ]}
+                    rows={isMobile? 18 : 6}
+                    cols={isMobile? 2: 6}/>
             </div>
             <h1 className="text-black text-3xl font-bold py-5">Teen Committee Members</h1>
-            <div className="overflow-x-auto bg-[#f6eee3] md:w-150 lg:w-auto">
-            <Table className="border-1 border-black ">
-                <TableBody className="divide-y">
-                <TableRow className=" text-black">
-                    <TableCell className="whitespace-nowrap font-medium ">
-                    Samantha Kerpel
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium ">
-                    Eva Douvlis
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium ">
-                    Yoonsey Kim
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Nora Mcclenahan
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Elie Stadelmann
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Brady Knutsen
-                    </TableCell>
-                </TableRow>
-                <TableRow className=" text-black">
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Dani Curry
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium ">
-                    Clementine Lincoln
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Gisele Lincoln
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Dylan Gryll
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Ellis P.
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Arunima G.
-                    </TableCell>
-                </TableRow>
-                <TableRow className=" text-black">
-                    <TableCell className="whitespace-nowrap font-medium">
-                    Alexis Rosen
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium ">
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium ">
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    </TableCell>
-                    <TableCell className="whitespace-nowrap font-medium">
-                    </TableCell>
-                </TableRow>
-                </TableBody>
-            </Table>
-        </div>
+            <div className="overflow-x-auto bg-[#f6eee3] md:w-150 lg:w-auto px-5 md:px-0">
+                <ComTable names={[
+                    "Samantha Kerpel", "Eva Douvlis", "Yoonsey Kim", "Nora Mcclenahan", "Elie Stadelmann",
+                    "Brady Knutsen", "Dani Curry",	"Clementine Lincoln", "Gisele Lincoln",	"Dylan Gryll",
+                    "Ellis P.",	"Arunima G.", "Alexis Rosen"
+                ]}
+                rows = {isMobile? 7 : 3}
+                cols = {isMobile? 2: 6}/>
+            </div>
         </div>
     </>
     )

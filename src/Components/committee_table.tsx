@@ -1,133 +1,61 @@
-import { Table, TableBody, TableCell, TableRow } from "flowbite-react";
-export function ComTable(){
-    return(
-    <>
+import { Table, TableBody, TableRow, TableCell } from "flowbite-react";
+
+type ComTableProps = {
+  names?: string[];
+  rows?: number;
+  cols?: number;
+  cellClassName?: string;
+  colGapClassName?: string; // controls spacing between columns
+};
+
+export function ComTable({
+  names = [],
+  rows = 1,
+  cols = 1,
+  cellClassName = "whitespace-nowrap font-medium",
+  colGapClassName = "gap-x-8", // default uniform gap
+}: ComTableProps) {
+  const r = Math.max(1, Math.floor(rows));
+  const c = Math.max(1, Math.floor(cols));
+  const total = r * c;
+
+  // Clean + size the data to exactly rows*cols
+  const cleaned = (names ?? []).map((n) =>
+    typeof n === "string" ? n.trim() : String(n ?? "")
+  );
+  const sized = [
+    ...cleaned.slice(0, total),
+    ...Array(Math.max(0, total - cleaned.length)).fill("\u00A0"), // non-breaking space
+  ];
+
+  // Chunk into rows
+  const grid = Array.from({ length: r }, (_, i) =>
+    sized.slice(i * c, (i + 1) * c)
+  );
+
+  return (
     <div className="overflow-x-auto bg-[#f6eee3]">
-        <Table className="border-1 border-black ">
-            <TableBody className="divide-y">
-            <TableRow className=" text-black">
-                <TableCell className="whitespace-nowrap font-medium ">
-                Angela Redman
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Bonnie Kanner
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Jenny DuHamel
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Rachel Bankier
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Linsey Patten
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Nicole Moritz
-                </TableCell>
+      <Table className="border-1 border-black">
+        <TableBody className="divide-y">
+          {grid.map((row, rowIdx) => (
+            <TableRow key={`row-${rowIdx}`} className="text-black">
+              <div
+                className={`grid ${colGapClassName}`}
+                style={{ gridTemplateColumns: `repeat(${c}, minmax(0,1fr))` }}
+              >
+                {row.map((name, colIdx) => (
+                  <TableCell
+                    key={`cell-${rowIdx}-${colIdx}`}
+                    className={cellClassName}
+                  >
+                    {name}
+                  </TableCell>
+                ))}
+              </div>
             </TableRow>
-            <TableRow className=" text-black">
-                <TableCell className="whitespace-nowrap font-medium">
-                John Wilkenson
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Lynn Caroll
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Peg Morrisroe
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Adrienne Driessen
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Hannah Wolod
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Amanda Alvarez
-                </TableCell>
-            </TableRow>
-            <TableRow className=" text-black">
-                <TableCell className="whitespace-nowrap font-medium">
-                Tom Van Winkle
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Brittany Eisenberg
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Susie Cutler
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Joe Cohen
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Michele Cochara
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Jordin Jewel
-                </TableCell>
-            </TableRow>
-            <TableRow className=" text-black">
-                <TableCell className="whitespace-nowrap font-medium ">
-                Andy Frankel
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Johnny Guarnieri
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Brian Thibaut
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                J.P. Veillon
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Sheila Collins
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Kelly Cooper
-                </TableCell>
-            </TableRow>
-            <TableRow className=" text-black">
-                <TableCell className="whitespace-nowrap font-medium ">
-                Kelly Collins
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Lindsey Petlak
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Chase Rowars
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Jeff Steybe
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Christine Mihovilovich
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Mike Lee
-                </TableCell>
-            </TableRow>
-            <TableRow className=" text-black">
-                <TableCell className="whitespace-nowrap font-medium ">
-                Lisa Curry
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Erika Jones
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium ">
-                Lauren Schwartz
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Sue Violet
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Dawne Pohlman
-                </TableCell>
-                <TableCell className="whitespace-nowrap font-medium">
-                Sue Violet
-                </TableCell>
-            </TableRow>
-            </TableBody>
-        </Table>
+          ))}
+        </TableBody>
+      </Table>
     </div>
-    </>
-    )
+  );
 }
