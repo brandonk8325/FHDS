@@ -10,9 +10,11 @@ function Contact(){
             </div>
             <div className="md:scale-130 md:py-40 lg:scale-100 lg:py-0">
                 <div className="pt-nav-height ">
-                <form className={`md:py-20 flex flex-col justify-evenly text-black`}>
+                <form className={`md:py-20 flex flex-col justify-evenly text-black`} name="contact" method="POST"   data-netlify="true" data-netlify-honeypot="bot-field">
                     <div className={`bg-darkgreen px-10 py-10 md:px-15 lg:py-8 md:py-15 rounded-4xl w-fit`}>
                         <h1 className="text-3xl pb-2 text-white">Contact Us</h1>
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p hidden> <label> Testing for SPAM<input name="bot-field" /> </label> </p>
                         <div >
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend text-white">Your Name *</legend>

@@ -19,7 +19,7 @@ function About(){
 
     return(
     <>
-        <div className=" flex flex-col items-center justify-center bg-[#f6eee3] pb-10">
+        <div className=" flex flex-col items-center justify-center bg-[#f6eee3] pb-5">
             <div className="lg:h-screen md:p-10 items-center justify-center w-full bg-[#b7c3be]">
                 <Component/>
                 <div className="pt-nav-height justify-evenly items-center flex lg:flex-row w-full h-full md:gap-20 flex-col-reverse">
@@ -28,20 +28,20 @@ function About(){
                 </div>
                 <div className='w-full md:w-150 '>
                     <h3 className="text-3xl text-center font-bold dark:text-black pb-10 pt-10 md:pt-10">About Us</h3>
-                    <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  FHDS has behaviorists and trainers that will help provide the dogs with skills that will increase their chances of getting adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they were previously getting.  FHDS will meet each dog where they are, to ensure that they are thriving and living a beautiful life. </p>
+                    <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few dog sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  We have behaviorists and trainers that will help provide the dogs with skills that will increase their chances of recieving adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they will ever receive in their lives.  We will work with each dog's individual needs in order to ensure that they are thriving and living a beautiful life. </p>
                 </div>
                 </div>
             </div>
             <div className='flex lg:flex-row pb-10 md:py-10 items-center justify-evenly w-full bg-[#f6eee3] md:p-10 md:gap-20 flex-col'>
                 <div className='w-full md:w-150 items-center justify-between'>
                     <h3 className="text-3xl text-center font-bold py-10 dark:text-black">Our Story</h3>
-                    <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
+                    <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with a goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
                     <div className="-translate-y-3 pt-5 md:pt-10 px-5 md:px-5">
                         <AbtTimeline steps={[
-                            { year: "2022", text: "Became a non-profit" },
+                            { year: "2022", text: ["Became a",<br/>, "501(c)(3)", <br/>, "non-profit"] },
                             { year: "2023", text: "Purchased 6-acres to become future home of FHDS" },
                             { year: "2024", text: "Completed architectural and engineering plans" },
-                            { year: "2025", text: "Selected contractor and obtained approval for permits" },
+                            { year: "2025", text: "Selected contractor and will obtain approval for permits." },
                         ]}/>
                     </div>
                 </div>
@@ -63,7 +63,7 @@ function About(){
                 { name: "Abhay Kanada", image: "/static/Abhay_Kanada.jpg", company: "Big Ten Network", descriptor: "Director of Technology" },
                 { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "" },
                 ]} 
-                perRow={5} className="w-full justify-evenly"/>
+                perRow={5} type="about" className="w-full justify-evenly"/>
             </div>
             <h1 className="text-black text-3xl font-bold">Chair People</h1>
             <CardsGrid cards={
@@ -72,7 +72,7 @@ function About(){
                 { name: "Robin Torch", image: "/static/Robin_Torch.jpeg", descriptor: "Outreach Chair" },
                 { name: "Brandon Kerpel", image: "/static/Brandon_Kerpel.jpg",  descriptor: "Website Manager Chair" },
                 ]} 
-            perRow={4} className="w-full justify-evenly"/>
+            perRow={4} type="about" className="w-full justify-evenly"/>
             <h1 className="text-black text-3xl font-bold pb-5 ">Committee Members</h1>
             <div className="md:w-150 lg:w-auto px-5 md:px-0">
                 <ComTable  names={[
@@ -96,6 +96,7 @@ function About(){
                 rows = {isMobile? 7 : 3}
                 cols = {isMobile? 2: 6}/>
             </div>
+            <p className="text-black pt-5">If you're interested in joining our team, please contact David at david@fureverhomedogsanctuary.org or 773-520-3568</p>
         </div>
     </>
     )

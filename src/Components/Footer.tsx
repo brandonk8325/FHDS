@@ -21,7 +21,9 @@ function Footer(){
                             </div>
                         </div>
                         <div className="lg:w-150 md:w-full flex justify-start text-center md:text-left">
-                            <form>
+                            <form name = "newsletter" method="POST"   data-netlify="true" data-netlify-honeypot="bot-field">
+                                <input type="hidden" name="form-name" value="newsletter" />
+                                <p hidden><label> Testing for SPAM <input name="bot-field" /></label></p>
                                 <label htmlFor="input-group-1" className="border-0 shadow-0  text-sm font-medium  dark:text-white bg-*  ">Join our Newsletter</label>
                                 <div className="flex flex-col md:flex-row bg-*">
                                     <div className="join border-0 shadow-0 h-10">
@@ -32,7 +34,7 @@ function Footer(){
                                             </label>
                                             <div className="validator-hint hidden ">Enter valid email address</div>
                                         </div>
-                                        <button className={`btn border-1 border-[#76947A]/70 focus:h-full  h-full join-item bg-darkgreen border-0 shadow-none`}>Join</button>
+                                        <button className={`btn border-1 border-[#76947A]/70 focus:h-full  h-full join-item bg-darkgreen border-0 shadow-none`} type = "submit">Join</button>
                                         </div>
                                 </div>
                             </form>

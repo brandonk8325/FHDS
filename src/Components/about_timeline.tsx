@@ -1,4 +1,6 @@
-type Step = { year: string; text: string };
+import type { ReactNode } from "react";
+
+type Step = { year: string; text: ReactNode };
 
 export default function AbtTimeline({
   maxWidth = "max-w-none",

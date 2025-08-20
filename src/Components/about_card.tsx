@@ -1,5 +1,6 @@
+import type { ReactNode } from "react";
 
-export function AboutCard({name = "Name", descriptor = "descriptor", image = "../static/dog.jpg", company = ""}) {
+export function AboutCard({name = "Name", descriptor = "descriptor", image = "../static/dog.jpg", company = ""}: {name: string, descriptor?:ReactNode, image?:string, company?:string}) {
   return (
     <div className= {`max-w-3xs border-1 border-black rounded-lg bg-darkgreen`}>
         <img className="rounded-t-lg w-3xs" src={image} alt="" /> 

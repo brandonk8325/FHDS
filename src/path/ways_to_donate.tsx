@@ -1,4 +1,6 @@
-import { BlankCard } from "../Components/blank_card";
+import { CardsGrid } from "../Components/card_grid";
+import DAFDirectReact from "../Components/DAF";
+import DAFDirectWidget from "../Components/DAF";
 import { EventCard } from "../Components/events_card";
 import {Component} from "../Components/Navbar";
 
@@ -7,25 +9,22 @@ export default function WaysToDonate(){
         <>
         <div className="flex flex-col justify-center items-center w-full bg-eggshell">
             <Component/>
-            <div className={`pt-nav-height flex flex-col w-300 `}>
-                <div className="py-10 flex-row flex justify-evenly ">
-                    <EventCard title="Zelle" description="Please send your donation to info@fhdsmail.org"/>
-                    <EventCard title="Check" description="Please make payable to Furever Home Dog Sanctuary. You can send it to 655 Deerfield Road, Suite 100 #408 Deerfield, Illinois 60015"/>
-                    <EventCard title="Employer Matching Gifts" description="Many employers sponsor matching gift programs and will match, double, triple, or even quadruple charitable contributions made by their employees. We encourage you to check with your HR department for your employer's policy."/>
-                    <EventCard title = "IRA Donations" description="An individual retirement account (IRA), also known as IRA Charitable Distributions, is the savviest way for individuals aged 70.5 or older to maximize their charitable impact."/>
+            <div className={`pt-nav-height w-full pl-5`}>
+                <CardsGrid cards={[
+                    {name: "Zelle", descriptor: "Please send your donation to info@fhdsmail.org"},
+                    {name: "Check", descriptor:["Please make payable to Furever Home Dog Sanctuary. You can send it to:", <br/>, "655 Deerfield Road,",<br/>," Suite 100 #408", <br/>,"Deerfield, Illinois 60015"]},
+                    {name: "Insurance", descriptor: "Designate FHDS as the beneficiary of a life insurance policy."},
+                    {name: "IRA Donations", descriptor: "An individual retirement account (IRA), also known as IRA Charitable Distributions, is the savviest way for individuals aged 70.5 or older to maximize their charitable impact." },
+                    {name: "Donor Advised Funds", descriptor: ["A donor-advised fund, or DAF, is like a charitable investment account for the sole purpose of supporting charitable organizations you care about. When you contribute cash, securities, or other assets to a donor-advised fund, you are generally eligible to take an immediate tax deduction. Then those funds can be invested for tax-free growth, and you can recommend grants to any eligible IRS-qualified public charity.", <div className="pt-5"><DAFDirectReact/></div>]},
+                    {name: "Stocks and Other Securities", descriptor: "Donating individual stock may save you money. You avoid capital gains tax while deducting 100% of the value of the contribution. "},
+                    {name: "Bequests and Legacy Gifting", descriptor: "Designate FHDS as part of your estate. "},
+                    {name: "Employer Matching Gifts", descriptor: "Many employers sponsor matching gift programs and will match, double, triple, or even quadruple charitable contributions made by their employees. We encourage you to check with your HR department for your employer's policy."},
+                    {name: "Cryptocurrency", descriptor:"When you donate appreciated cryptocurrency to Furever Home Dog Sanctuary, you don't owe capital gains tax on those earnings, neither do we." }
+                ]} perRow={4} type="ways_to_donate"/>
+                <div className="px-10 py-10 justify-evenly">
+                    <p className="text-black">For more information, please contact David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org</p>
                 </div>
-                <div className="py-10 flex-row flex justify-evenly">
-                    <EventCard title="Donor Advised Funds" description="EXPLAIN"/>
-                    <EventCard title="Stocks and Other Securities" description="Donating individual stock may save you money. You avoid capital gains tax while deducting 100 percent of the value of the contribution. Please contact David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org"/>
-                    <EventCard title="Bequests and Legacy Gifting" description="Designate FHDS as part of your estate. For more information, please contact: David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org."/>
-                    <EventCard title="Insurance" description="Designate FHDS as the beneficiary of a life insurance policy. For more information, please contact: David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org"/>
-                </div>
-                <div className="py-10 flex-row flex justify-evenly">
-                    <EventCard title="Cryptocurrency" description="When you donate appreciated cryptocurrency to Furever Home Dog Sanctuary, you don't owe capital gains tax on those earnings, neither do we."/>
-                    <BlankCard/>
-                    <BlankCard/>
-                    <BlankCard/>
-                </div>
+                
             </div>
         </div>
         </>
