@@ -17,7 +17,6 @@ function Contact() {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              action="/thank-you"
               className="md:py-20 flex flex-col justify-evenly text-black"
             >
               {/* Required by Netlify to identify the form */}
