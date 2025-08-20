@@ -15,10 +15,10 @@ return(
         </div>
         <div className="pt-60 flex flex-col items-center justify-center relative z-10">
           <div className='pt-5'>
-            <h1 className="mb-4 font-extrabold font-serif leading-none text-center tracking-tight text-gray-900 text-5xl lg:text-6xl dark:text-white z-10">Furever Home Dog Sanctuary </h1>
+            <h1 className="mb-4 font-extrabold font-serif leading-none text-center tracking-tight  text-5xl lg:text-6xl text-white z-10">Furever Home Dog Sanctuary </h1>
           </div>
           <div className='pt-5'>
-            <h3 className="text-l font-serif font-bold z-50 text-center dark:text-white">Rescuing and rehabilitating dogs to prepare them to be adopted into their furever home</h3>        
+            <h3 className="text-l font-serif font-bold z-50 text-center text-white">Rescuing and rehabilitating dogs to prepare them to be adopted into their furever home</h3>        
           </div>
           <div className='flex flex-row pt-15'>
             <div className='px-10'>
