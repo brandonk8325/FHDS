@@ -47,7 +47,7 @@ function Contact() {
                 {/* Email — ensure EmailForm renders an input with this name */}
                 <div>
                   {/* Your EmailForm should use this prop (e.g., <input type="email" name={name} .../>) */}
-                  <EmailForm name="email" required />
+                  <EmailForm name="email" />
                 </div>
 
                 {/* Phone — ensure PhoneForm renders an input with this name */}
