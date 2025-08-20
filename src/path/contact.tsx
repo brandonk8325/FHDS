@@ -138,7 +138,7 @@
 export default function Contact(){
     return(
     <>
-    <form  id = "myForm" name="contact" method="POST" action = "/contact" data-netlify = "true">
+    <form  id = "myForm" name="contact" method="POST" action = "/" data-netlify = "true">
       <div>
       <input type = "hidden" name = "form-name" value = "contact"/>
         <input type="text"placeholder="First Name*" id="firstName" name = "First Name" required />
