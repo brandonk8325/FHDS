@@ -1,7 +1,5 @@
 import { CardsGrid } from "../Components/card_grid";
 import DAFDirectReact from "../Components/DAF";
-import DAFDirectWidget from "../Components/DAF";
-import { EventCard } from "../Components/events_card";
 import {Component} from "../Components/Navbar";
 
 export default function WaysToDonate(){
