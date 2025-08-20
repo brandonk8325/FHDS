@@ -9,16 +9,19 @@ function encode(data: Record<string, FormDataEntryValue>) {
 
 function Contact() {
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
+  const [errMsg, setErrMsg] = useState<string>("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("idle");
+    setErrMsg("");
 
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // Netlify requires a form-name key matching the form's name
+    // Ensure required Netlify keys exist
     if (!data.get("form-name")) data.set("form-name", "contact");
+    if (!data.get("bot-field")) data.set("bot-field", ""); // honeypot
 
     try {
       const res = await fetch("/", {
@@ -31,15 +34,29 @@ function Contact() {
         setStatus("ok");
         form.reset();
       } else {
+        const txt = await res.text().catch(() => "");
+        setErrMsg(`Status ${res.status}${txt ? ` — ${txt.slice(0, 200)}` : ""}`);
         setStatus("err");
       }
-    } catch {
+    } catch (err) {
+      setErrMsg(err instanceof Error ? err.message : String(err));
       setStatus("err");
     }
   }
 
   return (
     <>
+      {/* Invisible STATIC form so Netlify can detect fields at build time.
+          Must be present in the shipped HTML. Keep this outside any conditionals. */}
+      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="tel" name="phone" />
+        <textarea name="message" />
+        <input name="bot-field" />
+      </form>
+
       <div className="flex flex-col items-center justify-center py-10 lg:h-screen bg-[#f6eee3]">
         <div>
           <Component />
@@ -52,13 +69,13 @@ function Contact() {
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
+              acceptCharset="UTF-8"
               className="md:py-20 flex flex-col justify-evenly text-black"
               onSubmit={handleSubmit}
             >
-              {/* Required by Netlify to identify the form */}
               <input type="hidden" name="form-name" value="contact" />
 
-              {/* Honeypot anti-spam field */}
+              {/* Honeypot */}
               <p hidden aria-hidden="true">
                 <label>
                   Don’t fill this out: <input name="bot-field" />
@@ -80,12 +97,12 @@ function Contact() {
                   />
                 </fieldset>
 
-                {/* Email — EmailForm must render an input with this exact name */}
+                {/* Email — EmailForm MUST render <input name="email" ... /> */}
                 <div>
                   <EmailForm name="email" />
                 </div>
 
-                {/* Phone — PhoneForm must render an input with this exact name */}
+                {/* Phone — PhoneForm MUST render <input name="phone" ... /> */}
                 <div>
                   <PhoneForm name="phone" />
                 </div>
@@ -112,21 +129,13 @@ function Contact() {
                     <span className="text-white/90">Thanks! Your message was sent.</span>
                   )}
                   {status === "err" && (
-                    <span className="text-red-200">Something went wrong. Please try again.</span>
+                    <span className="text-red-200">
+                      Something went wrong. Please try again. {errMsg && <em>({errMsg})</em>}
+                    </span>
                   )}
                 </div>
               </div>
             </form>
-
-            {/* Optional: a hidden static form helps Netlify pick up fields at build time
-                if EmailForm/PhoneForm are dynamic. Uncomment if needed.
-            <form name="contact" data-netlify="true" hidden>
-              <input type="text" name="name" />
-              <input type="email" name="email" />
-              <input type="tel" name="phone" />
-              <textarea name="message" />
-            </form>
-            */}
           </div>
         </div>
       </div>
