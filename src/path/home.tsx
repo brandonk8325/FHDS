@@ -1,7 +1,6 @@
 import {Component} from "../Components/Navbar"
 import AbtTimeline from "../Components/about_timeline"
 import { Link } from "react-router-dom"
-import Timeline from "../Components/timeline"
 function Home(){
 return(
 <>

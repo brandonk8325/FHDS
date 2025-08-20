@@ -1,11 +1,7 @@
-//Our team
-import { AboutCard } from "../Components/about_card"
 import AbtTimeline from "../Components/about_timeline";
 import { CardsGrid } from "../Components/card_grid";
 import { ComTable } from "../Components/committee_table"
 import {Component} from "../Components/Navbar"
-import Timeline from "../Components/timeline"
-import { Table, TableBody, TableCell, TableRow } from "flowbite-react";
 import { useState, useEffect } from "react";
 
 
