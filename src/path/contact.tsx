@@ -3,10 +3,6 @@ import { EmailForm } from "../Components/email_form";
 import { PhoneForm } from "../Components/phone_form";
 import { Component } from "../Components/Navbar";
 
-function encode(data: Record<string, FormDataEntryValue>) {
-  return new URLSearchParams(data as Record<string, string>).toString();
-}
-
 function Contact() {
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
   const [errMsg, setErrMsg] = useState<string>("");
@@ -17,17 +13,13 @@ function Contact() {
     setErrMsg("");
 
     const form = e.currentTarget;
-    const data = new FormData(form);
-
-    // Ensure required Netlify keys exist
-    if (!data.get("form-name")) data.set("form-name", "contact");
-    if (!data.get("bot-field")) data.set("bot-field", ""); // honeypot
+    const formData = new FormData(form);
 
     try {
       const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode(Object.fromEntries(data.entries())),
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (res.ok) {
@@ -46,14 +38,17 @@ function Contact() {
 
   return (
     <>
-      {/* Invisible STATIC form so Netlify can detect fields at build time.
-          Must be present in the shipped HTML. Keep this outside any conditionals. */}
-      <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
-        <input type="hidden" name="form-name" value="contact" />
+      {/* Static form for Netlify detection - must match the real form fields exactly */}
+      <form 
+        name="contact" 
+        data-netlify="true"
+              data-netlify-honeypot="bot-field"
+        hidden
+      >
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="tel" name="phone" />
-        <textarea name="message" />
+        <textarea name="message"></textarea>
         <input name="bot-field" />
       </form>
 
@@ -67,20 +62,16 @@ function Contact() {
             <form
               name="contact"
               method="POST"
+              action="/"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
-              acceptCharset="UTF-8"
               className="md:py-20 flex flex-col justify-evenly text-black"
               onSubmit={handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
 
               {/* Honeypot */}
-              <p hidden aria-hidden="true">
-                <label>
-                  Don’t fill this out: <input name="bot-field" />
-                </label>
-              </p>
+              <input name="bot-field" style={{ display: 'none' }} />
 
               <div className="bg-darkgreen px-10 py-10 md:px-15 lg:py-8 md:py-15 rounded-4xl w-fit mx-auto">
                 <h1 className="text-3xl pb-2 text-white">Contact Us</h1>
@@ -111,7 +102,6 @@ function Contact() {
                 <fieldset className="fieldset">
                   <legend className="fieldset-legend text-white">Your Message *</legend>
                   <textarea
-                    id="comment"
                     name="message"
                     className="bg-[#f6eee3] rounded-md"
                     placeholder="Leave a comment..."
