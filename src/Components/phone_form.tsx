@@ -1,4 +1,4 @@
-export function PhoneForm(){
+export function PhoneForm({name = "phone"}){
     return(
         <>
         <div className='flex flex-row items-center justify-evenly w-full'>
@@ -27,6 +27,7 @@ export function PhoneForm(){
                         pattern="[0-9]*"
                         minLength={10}
                         maxLength={10}
+                        name = {name}
                         title="Must be 10 digits"
                     />
                 </label>
