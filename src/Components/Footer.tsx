@@ -21,7 +21,12 @@ function Footer(){
                             </div>
                         </div>
                         <div className="lg:w-150 md:w-full flex justify-start text-center md:text-left">
-                            <form name = "newsletter" method="POST"   data-netlify="true" data-netlify-honeypot="bot-field">
+                            <form name="newsletter"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/success"
+          acceptCharset="UTF-8">
                                 <input type="hidden" name="form-name" value="newsletter" />
                                 <p hidden><label> Testing for SPAM <input name="bot-field" /></label></p>
                                 <label htmlFor="input-group-1" className="border-0 shadow-0  text-sm font-medium  dark:text-white bg-*  ">Join our Newsletter</label>
@@ -30,7 +35,7 @@ function Footer(){
                                         <div>
                                             <label className={`input validator join-item border-[#76947A]/70  shadow-0 bg-darkgreen`}>
                                             <svg className="h-[1em] opacity-100 border-0 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="white"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g> </svg>
-                                            <input type="email" className="placeholder-white/70 focus:outline-none focus:ring-0 focus:border-transparent" placeholder="mail@site.com" required />
+                                            <input type="email" autoComplete="email" className="placeholder-white/70 focus:outline-none focus:ring-0 focus:border-transparent" placeholder="mail@site.com" required />
                                             </label>
                                             <div className="validator-hint hidden ">Enter valid email address</div>
                                         </div>
