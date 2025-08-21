@@ -17,7 +17,7 @@ export function EmailForm({name = "email"}){
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </g>
             </svg>
-            <input type="email" name = {name} className="bg-[#f6eee3] border-l-1 border-neutral-400 focus:ring-0" placeholder="mail@site.com" required />
+            <input type="email" autoComplete="email" name = {name} className="bg-[#f6eee3] border-l-1 border-neutral-400 focus:ring-0" placeholder="mail@site.com" required />
             </label>
             <div className="validator-hint hidden ">Enter valid email address</div>
             </div>

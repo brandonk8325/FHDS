@@ -28,6 +28,7 @@ export function PhoneForm({name = "phone"}){
                         minLength={10}
                         maxLength={10}
                         name = {name}
+                        autoComplete="tel"
                         title="Must be 10 digits"
                     />
                 </label>
