@@ -134,22 +134,83 @@
 // }
 
 // export default Contact;
+ // Contact.tsx
+export default function Contact() {
+  return (
+    <main className="min-h-[60vh] grid place-items-center bg-[#f6eee3] py-10">
+      <div className="w-full max-w-xl rounded-2xl bg-[#1C4436] p-6 text-white">
+        <h1 className="mb-4 text-3xl font-semibold">Contact Us</h1>
 
-export default function Contact(){
-    return(
-    <>
-    <form  id = "myForm" name="contact" method="POST" action = "/" data-netlify = "true">
-      <div>
-      <input type = "hidden" name = "form-name" value = "contact"/>
-        <input type="text"placeholder="First Name*" id="firstName" name = "First Name" required />
-      <input type="text" placeholder="Last Name*" id="lastName" name = "Last Name" required />
-      <input type="email" placeholder="Email Address*" id="their_email_address" name = "Email" required />
-      <input type="text"  placeholder="Phone Number*" id="phoneNumber" name = "Phone Number" required />
-      <input type="text"  placeholder="City, State, Zip Code*" id="location" name = "City, State" required />
-      <textarea id="message" name="message" placeholder="Message*"></textarea>
-      <button type="submit" id = "myBtn"  >Submit</button>
+        {/* Netlify-handled form (classic POST + redirect to /success) */}
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/success"
+          acceptCharset="UTF-8"
+          className="space-y-4"
+        >
+          {/* Required for Netlify */}
+          <input type="hidden" name="form-name" value="contact" />
+
+          {/* Honeypot (hidden) */}
+          <p hidden aria-hidden="true">
+            <label>
+              Don’t fill this out: <input name="bot-field" />
+            </label>
+          </p>
+
+          <div>
+            <label className="mb-1 block">Your Name *</label>
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full rounded-md bg-[#f6eee3] p-2 text-black"
+              autoComplete="name"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1 block">Email *</label>
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full rounded-md bg-[#f6eee3] p-2 text-black"
+              autoComplete="email"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1 block">Phone</label>
+            <input
+              type="tel"
+              name="phone"
+              className="w-full rounded-md bg-[#f6eee3] p-2 text-black"
+              autoComplete="tel"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1 block">Your Message *</label>
+            <textarea
+              name="message"
+              required
+              rows={4}
+              className="w-full rounded-md bg-[#f6eee3] p-2 text-black"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="rounded-md border-4 border-[#a37521] px-5 py-2"
+          >
+            Submit
+          </button>
+        </form>
       </div>
-    </form>
-    </>
-    );
+    </main>
+  );
 }
