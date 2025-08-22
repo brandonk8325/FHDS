@@ -117,17 +117,19 @@ export default function DAFDirectReact() {
       onKeyDown={onKeyPress}
       id="dafdirectdiv"
     >
-      <div className="mb-3">
+      <div className="mb-3 h-1">
         {/* Logo variant based on size like original */}
         {parsed.size === "2" ? (
           <img
             src="https://www.dafdirect.org/ddirect/images/logo-DAF-direct2.jpg"
             alt="Logo DAF Direct"
+            className="h-10"
           />
         ) : (
           <img
             src="https://www.dafdirect.org/ddirect/images/logo-DAF-direct1.jpg"
             alt="Logo DAF Direct"
+            className="h-10"
           />
         )}
       </div>
@@ -188,7 +190,7 @@ export default function DAFDirectReact() {
           <option value="BNYM">BNY Mellon</option>
         </select>
 
-        {parsed.showDsg && (
+        {/* {parsed.showDsg && (
           <>
             <label htmlFor="dafdirect_dsgtxt" className="font-medium">
               Designation:
@@ -203,7 +205,7 @@ export default function DAFDirectReact() {
               placeholder=""
             />
           </>
-        )}
+        )} */}
 
         {parsed.showAmt && (
           <div className="mb-3">
