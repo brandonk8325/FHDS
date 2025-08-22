@@ -27,14 +27,14 @@ function About(){
                     <img className=" w-full md:w-150 rounded-lg " src="/static/About_Us.jpg" alt="image description" />
                 </div>
                 <div className='w-full md:w-150 '>
-                    <h3 className="text-3xl text-center font-bold dark:text-black pb-10 pt-10 md:pt-10">About Us</h3>
+                    <h3 className="text-3xl text-center font-bold text-black pb-10 pt-10 md:pt-10">About Us</h3>
                     <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few dog sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  We have behaviorists and trainers that will help provide the dogs with skills that will increase their chances of recieving adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they will ever receive in their lives.  We will work with each dog's individual needs in order to ensure that they are thriving and living a beautiful life. </p>
                 </div>
                 </div>
             </div>
             <div className='flex lg:flex-row pb-10 md:py-10 items-center justify-evenly w-full bg-[#f6eee3] md:p-10 md:gap-20 flex-col'>
                 <div className='w-full md:w-150 items-center justify-between'>
-                    <h3 className="text-3xl text-center font-bold py-10 dark:text-black">Our Story</h3>
+                    <h3 className="text-3xl text-center font-bold py-10 text-black">Our Story</h3>
                     <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with a goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
                     <div className="-translate-y-3 pt-5 md:pt-10 px-5 md:px-5">
                         <AbtTimeline steps={[
