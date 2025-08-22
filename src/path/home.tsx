@@ -37,12 +37,12 @@ return(
     <h3 className=" text-black font-bold pt-10 md:pb-8 text-center lg:text-4xl text-6xl font-serif">Upcoming Events</h3>
     <div className={`flex lg:flex-row pt-5 pb-10 lg:gap-30 flex-col gap-10 px-5 md:px-0`}>
         <div className="h-140 flex md:flex-col flex-col-reverse">
-            <img className="h-120" src = "/static/Event_1.png"/>
+            <img className="h-120 rounded-2xl shadow-md object-cover" src = "/static/Event_1.png"/>
             <div className="pb-5 md:py-5 justify-evenly flex w-full">
                 <ImagePopup/>
             </div>
         </div>
-        <img  className="h-140" src = "/static/Event_2.jpg"/>
+        <img  className="h-140 rounded-2xl shadow-md object-cover" src = "/static/Event_2.jpg"/>
     </div>
     </div>
     <div className={`flex lg:flex-row py-15 -z-10 items-center justify-evenly bg-[#f6eee3] flex-col gap-10`}>

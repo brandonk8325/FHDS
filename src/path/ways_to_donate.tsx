@@ -7,7 +7,7 @@ export default function WaysToDonate(){
         <>
         <div className="flex flex-col justify-center items-center w-full bg-eggshell text-white">
             <Component/>
-            <div className={`pt-nav-height w-full pl-5 md:pl-0`}>
+            <div className={`pt-nav-height w-full px-10 md:px-30`}>
                 <CardsGrid cards={[
                     {name: "Zelle", descriptor: "Please send your donation to info@fhdsmail.org"},
                     {name: "Check", descriptor:["Please make payable to Furever Home Dog Sanctuary", <br/>, "655 Deerfield Road,",<br/>," Suite 100 #408", <br/>,"Deerfield, Illinois 60015"]},
@@ -22,7 +22,6 @@ export default function WaysToDonate(){
                 <div className="px-10 pb-10 justify-center w-full flex">
                     <p className="text-black">For more information, please contact David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org</p>
                 </div>
-                
             </div>
         </div>
         </>

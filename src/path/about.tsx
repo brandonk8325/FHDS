@@ -38,7 +38,7 @@ function About(){
                     <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with a goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
                     <div className="-translate-y-3 pt-5 md:pt-10 px-5 md:px-5">
                         <AbtTimeline steps={[
-                            { year: "2022", text: ["Became a",<br/>, "501(c)(3)", <br/>, "non-profit"] },
+                            { year: "2022", text: ["Became a ",<br className="hidden md:block"/>, "501(c)(3) ", <br className="hidden md:block"/>, "non-profit"] },
                             { year: "2023", text: "Purchased 6-acres to become future home of FHDS" },
                             { year: "2024", text: "Completed architectural and engineering plans" },
                             { year: "2025", text: "Selected contractor and will obtain approval for permits." },
@@ -55,7 +55,7 @@ function About(){
             <hr className="border-1 w-full border-black"></hr>
             <h1 className={`text-black text-6xl font-serif font-bold py-10`}>Our Team</h1>
             <h1 className="text-black text-3xl font-bold">Board Members</h1>
-            <div className="w-full">
+            <div className="w-full px-5 md:px-0">
                 <CardsGrid cards={
                 [{ name: "David Kerpel", image: "/static/David_Kerpel.jpeg", company: "Law Offices of David S. Kerpel", descriptor: "President" },
                 { name: "Erin Kerpel", image: "/static/Erin_Kerpel.jpeg", company: "Gratitude Generation", descriptor: "Vice-President" },
@@ -66,13 +66,14 @@ function About(){
                 perRow={5} type="about" className="w-full justify-evenly"/>
             </div>
             <h1 className="text-black text-3xl font-bold">Chair People</h1>
-            <CardsGrid cards={
+            <div className="w-full px-5 md:px-0"><CardsGrid cards={
                 [{ name: "Heidi Sparacino", image: "/static/Heidi_Sparacino.png", descriptor: "Construction Chair" },
                 { name: "Irene Benedict", image: "/static/Irene_Benedict.jpg",  descriptor: "Social Media Chair" },
                 { name: "Robin Torch", image: "/static/Robin_Torch.jpeg", descriptor: "Outreach Chair" },
                 { name: "Brandon Kerpel", image: "/static/Brandon_Kerpel.jpg",  descriptor: "Website Manager Chair" },
                 ]} 
             perRow={4} type="about" className="w-full justify-evenly"/>
+            </div>
             <h1 className="text-black text-3xl font-bold pb-5 ">Committee Members</h1>
             <div className="md:w-150 lg:w-auto px-5 md:px-0">
                 <ComTable  names={[
@@ -91,7 +92,7 @@ function About(){
                 <ComTable names={[
                     "Samantha Kerpel", "Eva Douvlis", "Yoonsey Kim", "Nora Mcclenahan", "Elie Stadelmann",
                     "Brady Knutsen", "Dani Curry",	"Clementine Lincoln", "Gisele Lincoln",	"Dylan Gryll",
-                    "Ellis P.",	"Arunima G.", "Alexis Rosen"
+                    "Ellis Platzbecker",	"Arunima Ganguli", "Alexis Rosen"
                 ]}
                 rows = {isMobile? 7 : 3}
                 cols = {isMobile? 2: 6}/>
