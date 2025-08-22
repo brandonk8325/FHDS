@@ -21,7 +21,7 @@ export function PhoneForm({name = "phone"}){
                     </svg>
                     <input
                         type="tel"
-                        className="tabular-nums border-l-1 border-neutral-400 focus:ring-0"
+                        className="tabular-nums border-l-1 border-neutral-400 focus:ring-0 text-black"
                         required
                         placeholder="Phone"
                         pattern="[0-9]*"

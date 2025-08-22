@@ -3,10 +3,33 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 @plugin "daisyui";
-
 @theme {
   --color-darkgreen: #1C4436;
   --color-gold: #a37521;
   --color-eggshell: #f6eee3;
   --spacing-nav-height: 5rem;
 }
+
+:root, html, body { color-scheme: light; }
+
+/* Kill Chromium/Safari autofill background + set your color */
+html :is(input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill) {
+  box-shadow: 0 0 0 1000px var(--color-eggshell, #f6eee3) inset !important;
+  -webkit-text-fill-color: #111 !important;
+  caret-color: #111;
+  background-clip: padding-box !important;
+  transition: background-color 100000s ease-in-out 0s !important; /* hides flash */
+}
+html :is(input:-webkit-autofill:focus, textarea:-webkit-autofill:focus, select:-webkit-autofill:focus) {
+  box-shadow: 0 0 0 1000px var(--color-eggshell, #f6eee3) inset !important;
+  -webkit-text-fill-color: #111 !important;
+}
+
+/* Firefox */
+html :is(input:-moz-autofill, textarea:-moz-autofill, select:-moz-autofill) {
+  box-shadow: 0 0 0 1000px var(--color-eggshell, #f6eee3) inset !important;
+  color: #111 !important;
+}
+
+/* Optional: let your Tailwind ring handle focus instead of the blue outline */
+html :is(input, textarea, select):focus-visible { outline: none; }

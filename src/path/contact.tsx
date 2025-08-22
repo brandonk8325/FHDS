@@ -35,7 +35,7 @@ export default function Contact() {
                   <input
                     type="text"
                     name="name"
-                    className="input bg-[#f6eee3] placeholder-neutral-600 opacity-100"
+                    className="input bg-[#f6eee3] placeholder-neutral-600 opacity-100 text-black"
                     placeholder="Your Name"
                     autoComplete="name"
                     required
@@ -57,7 +57,7 @@ export default function Contact() {
                   <legend className="fieldset-legend text-white">Your Message *</legend>
                   <textarea
                     name="message"
-                    className="bg-[#f6eee3] rounded-md"
+                    className="bg-[#f6eee3] rounded-md text-black"
                     placeholder="Leave a comment..."
                     required
                     rows={4}

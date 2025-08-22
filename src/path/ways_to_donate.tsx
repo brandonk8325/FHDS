@@ -5,7 +5,7 @@ import {Component} from "../Components/Navbar";
 export default function WaysToDonate(){
     return(
         <>
-        <div className="flex flex-col justify-center items-center w-full bg-eggshell">
+        <div className="flex flex-col justify-center items-center w-full bg-eggshell text-white">
             <Component/>
             <div className={`pt-nav-height w-full pl-5`}>
                 <CardsGrid cards={[
@@ -19,7 +19,7 @@ export default function WaysToDonate(){
                     {name: "Employer Matching Gifts", descriptor: "Many employers sponsor matching gift programs and will match, double, triple, or even quadruple charitable contributions made by their employees. We encourage you to check with your HR department for your employer's policy."},
                     {name: "Cryptocurrency", descriptor:"When you donate appreciated cryptocurrency to Furever Home Dog Sanctuary, you don't owe capital gains tax on those earnings, neither do we." }
                 ]} perRow={4} type="ways_to_donate"/>
-                <div className="px-10 py-10 justify-evenly">
+                <div className="px-10 py-10 justify-center w-full flex">
                     <p className="text-black">For more information, please contact David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org</p>
                 </div>
                 

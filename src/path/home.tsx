@@ -22,7 +22,7 @@ return(
             <div className='px-10'>
               <Link to="/donate">
               <button className={`bg-gold md:bg-transparent  inline-flex items-center justify-center mb-2 me-2 overflow-hidden md:text-md font-medium text-white rounded-lg  hover:text-white `}>
-                  <span className={`px-15 md:px-20 py-5 tracking-wider transition-all ease-in duration-175 border-6 border-gold shover:md:text-3xl text-xl md:text-2xl hover:cursor-pointers rounded-lg`}>
+                  <span className={`px-15 md:px-20 py-5 tracking-wider transition-all ease-in duration-175 border-6 border-gold hover:md:text-2xl text-xl md:text-xl hover:cursor-pointers rounded-lg`}>
                   <p className=" ">Donate</p>
                 </span>
               </button>
