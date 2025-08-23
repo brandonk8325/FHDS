@@ -18,7 +18,7 @@ export default function WaysToDonate(){
                     {name: "Stocks & Securities", descriptor: "Donating individual stock may save you money. You avoid capital gains tax while deducting 100% of the value of the contribution. "},
                     {name: "Employer Matching", descriptor: "Many employers sponsor matching gift programs and will match, double, triple, or even quadruple charitable contributions made by their employees. We encourage you to check with your HR department for your employer's policy."},
                     // {name: "Cryptocurrency", descriptor:"When you donate appreciated cryptocurrency to Furever Home Dog Sanctuary, you don't owe capital gains tax on those earnings, neither do we." }
-                ]} perRow={4} type="ways_to_donate" className=""/>
+                ]} cardWidthRem={18} type="ways_to_donate" className=""/>
                 <div className="px-10 pb-10 justify-center w-full flex">
                     <p className="text-black">For more information, please contact David Kerpel, FHDS Founder and President, at 773-520-3568 or info@fhdsmail.org</p>
                 </div>

@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from "react";
+import type { FC, ReactNode, CSSProperties } from "react";
 import { AboutCard } from "./about_card";
 import { EventCard } from "./events_card";
 
@@ -11,70 +11,52 @@ type CardData = {
 
 type CardsGridProps = {
   cards?: CardData[];
-  /** Columns at md and up */
-  perRow?: number;
   /** Extra classes for outer wrapper */
   className?: string;
   /** Gap between cards (e.g., 'gap-8') */
   gapClassName?: string;
-  /** Wrapper around each card (e.g., 'w-fit' or 'w-full') */
-  itemClassName?: string;
-  /** 'about' uses compact centered columns; others use equal-width columns */
+  /** Fixed card width in rem (constant size across breakpoints) */
+  cardWidthRem?: number; // default 18rem ≈ 288px
+  /** 'about' uses AboutCard; anything else uses EventCard */
   type?: string;
 };
 
 export const CardsGrid: FC<CardsGridProps> = ({
   cards = [],
-  perRow = 5,
   className = "",
   gapClassName = "gap-8",
-  itemClassName, // we’ll set a sensible default per type below
+  cardWidthRem = 15,
   type = "about",
 }) => {
-  const t = (type || "").toLowerCase();
-  const isAboutLike = t === "about" || t === "chairs" || t === "team";
+  const isAboutLike = ["about", "chairs", "team"].includes(
+    (type || "").toLowerCase()
+  );
 
-  const cols = Number.isFinite(perRow) ? Math.max(1, Math.floor(perRow)) : 1;
-  const mdCols = Math.min(cols, cards.length || cols);
-
-  // Defaults per layout type
-  const itemWrapper =
-    itemClassName ?? (isAboutLike ? "w-fit" : "w-full");
-
-  // Grid template per layout type
-  const templateAtMd = isAboutLike
-    ? "md:[grid-template-columns:repeat(var(--md-cols),max-content)]"
-    : "md:[grid-template-columns:repeat(var(--md-cols),minmax(0,1fr))]";
-
-  // Horizontal alignment per layout type
-  const justifyRule = isAboutLike ? "justify-center" : "justify-stretch";
+  const styleVars: CSSProperties = {
+    ["--card-w" as any]: `${cardWidthRem}rem`,
+  };
 
   return (
-    <div className={`py-10 w-full ${className}`}>
-      <div
-        className={[
-          "grid",
-          // mobile: 1-col for non-about, 2-col for about (nice compact look)
-          isAboutLike ? "grid-cols-2" : "grid-cols-1",
-          templateAtMd,
-          justifyRule,
-          "items-start",
-          gapClassName,
-        ].join(" ")}
-        style={{ ["--md-cols" as any]: mdCols }}
-      >
+    <div className={`py-10 w-full ${className}`} style={styleVars}>
+      {/* Flex wrap keeps constant-size items centered beautifully */}
+      <div className={["flex flex-wrap justify-center", gapClassName].join(" ")}>
         {cards.map((c, i) => (
-          <div key={`${c.name}-${i}`} className={itemWrapper}>
-            {isAboutLike ? (
-              <AboutCard
-                name={c.name}
-                image={c.image}
-                company={c.company}
-                descriptor={c.descriptor}
-              />
-            ) : (
-              <EventCard title={c.name} description={c.descriptor} />
-            )}
+          <div
+            key={`${c.name}-${i}`}
+            className="w-[var(--card-w)] min-w-0"
+          >
+            <div className="w-full">
+              {isAboutLike ? (
+                <AboutCard
+                  name={c.name}
+                  image={c.image}
+                  company={c.company}
+                  descriptor={c.descriptor}
+                />
+              ) : (
+                <EventCard title={c.name} description={c.descriptor} />
+              )}
+            </div>
           </div>
         ))}
       </div>

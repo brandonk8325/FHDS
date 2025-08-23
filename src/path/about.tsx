@@ -11,7 +11,7 @@ function About(){
 
   useEffect(() => {
     // run once on mount and whenever screen is resized
-    const check = () => setIsMobile(window.innerWidth < 768); // Tailwind md breakpoint
+    const check = () => setIsMobile(window.innerWidth < 1040); // Tailwind md breakpoint
     check();
     window.addEventListener("resize", check);
     return () => window.removeEventListener("resize", check);
@@ -26,9 +26,34 @@ function About(){
                 <div className='px-5 py-10 md:px-0 md:py-0'>
                     <img className=" w-full md:w-150 rounded-lg " src="/static/About_Us.jpg" alt="image description" />
                 </div>
-                <div className='w-full md:w-150 '>
+                <div className='w-full md:w-150'>
                     <h3 className="text-3xl text-center font-bold text-black pb-10 pt-10 md:pt-10">About Us</h3>
                     <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few dog sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  We have behaviorists and trainers that will help provide the dogs with skills that will increase their chances of recieving adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they will ever receive in their lives.  We will work with each dog's individual needs in order to ensure that they are thriving and living a beautiful life. </p>
+                    <div className="w-full flex flex-col items-center justify-evenly text-center md:text-left">
+                            <p className="text-black pt-5 pb-2 font-bold">Stay Updated! Sign up for our newsletter</p>
+                            <form name="newsletter"
+                                method="POST"
+                                data-netlify="true"
+                                data-netlify-honeypot="bot-field"
+                                action="/success"
+                                acceptCharset="UTF-8"
+                            >
+                                <input type="hidden" name="form-name" value="newsletter" />
+                                <p hidden><label> Testing for SPAM <input name="bot-field" /></label></p>
+                                <div className="flex flex-col md:flex-row bg-*">
+                                    <div className="join border-0 shadow-0 h-10">
+                                        <div>
+                                            <label className={`input validator join-item border-1 border-darkgreen  shadow-0 bg-darkgreen/60`}>
+                                            <svg className="h-[1em] opacity-100 border-0 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="white"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g> </svg>
+                                            <input name="email" type="email" autoComplete="email" className="placeholder-white/70 focus:outline-none focus:ring-0  border-l-darkgreen border-l-1" placeholder="mail@site.com" required />
+                                            </label>
+                                            <div className="validator-hint hidden ">Enter valid email address</div>
+                                        </div>
+                                        <button className={`btn border-1 border-darkgreen focus:h-full  h-full join-item bg-darkgreen/60  shadow-none text-white`} type = "submit">Join</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
                 </div>
                 </div>
             </div>
@@ -63,8 +88,7 @@ function About(){
                 { name: "Ryan Geudel", image: "/static/Ryan_Geudel.jpg", company: "CJBS", descriptor: "Treasurer" },
                 { name: "Abhay Kanada", image: "/static/Abhay_Kanada.jpg", company: "Big Ten Network", descriptor: "Director of Technology" },
                 { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "Board Member At Large" },
-                ]} 
-                perRow={5} type="about" className="w-full justify-evenly"/>
+                ]}  type="about" className="w-full justify-evenly"/>
             </div>
             <h1 className="text-black text-3xl font-bold">Chair People</h1>
             <div className="w-full px-5 md:px-0"><CardsGrid cards={
@@ -72,8 +96,7 @@ function About(){
                 { name: "Irene Benedict", image: "/static/Irene_Benedict.jpg",  descriptor: "Social Media Chair" },
                 { name: "Robin Torch", image: "/static/Robin_Torch.jpeg", descriptor: "Outreach Chair" },
                 { name: "Brandon Kerpel", image: "/static/Brandon_Kerpel.jpg",  descriptor: "Website Manager Chair" },
-                ]} 
-            perRow={4} type="about" className="w-full justify-evenly"/>
+                ]} type="about" className="w-full justify-evenly"/>
             </div>
             <h1 className="text-black text-3xl font-bold pb-5 ">Committee Members</h1>
             <div className="md:w-150 lg:w-auto px-5 md:px-0">
@@ -89,7 +112,7 @@ function About(){
                     cols={isMobile? 2: 6}/>
             </div>
             <h1 className="text-black text-3xl font-bold py-5">Teen Committee Members</h1>
-            <div className="overflow-x-auto bg-[#f6eee3] md:w-150 lg:w-auto px-5 md:px-0">
+            <div className=" bg-[#f6eee3] md:w-150 lg:w-auto px-5 md:px-0">
                 <ComTable names={[
                     "Samantha Kerpel", "Eva Douvlis", "Yoonsey Kim", "Nora Mcclenahan", "Elie Stadelmann",
                     "Brady Knutsen", "Dani Curry",	"Clementine Lincoln", "Gisele Lincoln",	"Dylan Gryll",
