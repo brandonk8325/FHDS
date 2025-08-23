@@ -22,8 +22,8 @@ return(
           <div className='flex flex-row pt-15'>
             <div className='px-10'>
               <Link to="/donate">
-              <button className={` bg-gold inline-flex items-center justify-center mb-2 me-2 overflow-hidden md:text-md font-medium text-white rounded-lg  hover:text-white `}>
-                  <span className={`px-15 md:px-15 py-5 md:py-3 tracking-wider transition-all ease-in duration-175 border-6 border-gold hover:md:text-2xl text-xl md:text-xl hover:cursor-pointers rounded-lg`}>
+              <button className={`bg-[#a37521] md:bg-gold inline-flex items-center justify-center mb-2 me-2 overflow-hidden md:text-md font-medium text-white rounded-lg  hover:text-white `}>
+                  <span className={`px-15 md:px-15 py-5 md:py-3 tracking-wider transition-all ease-in duration-175 border-6 md:border-gold border-[#a37521] hover:md:text-2xl text-xl md:text-xl hover:cursor-pointers rounded-lg`}>
                   <p className=" ">Donate</p>
                 </span>
               </button>
@@ -36,9 +36,9 @@ return(
     <div className="flex flex-col items-center justify-center bg-[#b7c3be] w-full">
     <h3 className=" text-black font-bold pt-10 md:pb-8 text-center lg:text-4xl text-6xl font-serif">Upcoming Events</h3>
     <div className={`flex lg:flex-row pt-5 pb-10 lg:gap-30 flex-col gap-10 `}>
-        <div className="h-140 flex md:flex-col flex-col-reverse">
+        <div className="h-140 flex md:flex-col flex-col">
             <img className="h-120 rounded-2xl shadow-md object-cover px-5 md:px-0" src = "/static/Event_1.png"/>
-            <div className="pb-5 md:py-5 justify-evenly flex w-full">
+            <div className="pt-5 md:py-5 justify-evenly flex w-full">
                 <ImagePopup/>
                 <a target="_blank" rel="noopener noreferrer" href="https://www.zeffy.com/en-US/ticketing/rock-for-rescues-furever-home-dog-sanctuary-fundraiser">
                   <button className="h-10 px-5 rounded-lg bg-darkgreen text-white hover:bg-green-700">
@@ -47,9 +47,9 @@ return(
                 </a>
             </div>
         </div>
-        <div className="h-140 flex md:flex-col flex-col-reverse">
+        <div className="h-140 flex md:flex-col flex-col">
             <img className="h-120 rounded-2xl shadow-md object-cover px-5 md:px-0" src = "/static/Event_2.jpg"/>
-            <div className="pb-5 md:py-5 justify-evenly flex w-full">
+            <div className="pt-5 md:py-5 justify-evenly flex w-full">
                 <a target="_blank" rel="noopener noreferrer" href="https://lp.constantcontactpages.com/sl/vvHZknH">
                   <button className="h-10 px-5 rounded-lg bg-darkgreen text-white hover:bg-green-700">
                     Register for this Event
@@ -86,7 +86,7 @@ return(
               { year: "2022", text: "Became a 501(c)(3) non-profit" },
               { year: "2023", text: "Purchased 6-acres to become the future home of FHDS" },
               { year: "2024", text: "Completed architectural and engineering plans" },
-              { year: "2025", text: "Selected contractor and anticipate approval for construction permits" },
+              { year: "2025", text: "Selected contractor and will obtain approval for construction permits" },
             ]}
             stepWidth="10rem"
           />

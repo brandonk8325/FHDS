@@ -37,11 +37,12 @@ function About(){
                     <h3 className="text-3xl text-center font-bold py-10 text-black">Our Story</h3>
                     <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with a goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
                     <div className="-translate-y-3 pt-5 md:pt-10 px-5 md:px-5">
-                        <AbtTimeline steps={[
-                            { year: "2022", text: ["Became a ",<br className="hidden md:block"/>, "501(c)(3) ", <br className="hidden md:block"/>, "non-profit"] },
-                            { year: "2023", text: "Purchased 6-acres to become future home of FHDS" },
-                            { year: "2024", text: "Completed architectural and engineering plans" },
-                            { year: "2025", text: "Selected contractor and will obtain approval for permits." },
+                        <AbtTimeline
+                            steps={[
+                                { year: "2022", text: "Became a 501(c)(3) non-profit" },
+                                { year: "2023", text: "Purchased 6-acres to become the future home of FHDS" },
+                                { year: "2024", text: "Completed architectural and engineering plans" },
+                                { year: "2025", text: "Selected contractor and will obtain approval for construction permits" },
                         ]}/>
                     </div>
                 </div>
