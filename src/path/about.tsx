@@ -31,14 +31,14 @@ function About(){
                     <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few dog sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  We have behaviorists and trainers that will help provide the dogs with skills that will increase their chances of recieving adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they will ever receive in their lives.  We will work with each dog's individual needs in order to ensure that they are thriving and living a beautiful life. </p>
                     <div className="w-full flex flex-col items-center justify-evenly text-center md:text-left">
                             <p className="text-black pt-5 pb-2 font-bold">Stay Updated! Sign up for our newsletter</p>
-                            <form name="newsletter"
+                            <form name="newsletter2"
                                 method="POST"
                                 data-netlify="true"
                                 data-netlify-honeypot="bot-field"
                                 action="/success"
                                 acceptCharset="UTF-8"
                             >
-                                <input type="hidden" name="form-name" value="newsletter" />
+                                <input type="hidden" name="form-name" value="newsletter2" />
                                 <p hidden><label> Testing for SPAM <input name="bot-field" /></label></p>
                                 <div className="flex flex-col md:flex-row bg-*">
                                     <div className="join border-0 shadow-0 h-10">

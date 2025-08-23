@@ -40,7 +40,7 @@ function Footer(){
                                             </label>
                                             <div className="validator-hint hidden ">Enter valid email address</div>
                                         </div>
-                                        <button className={`btn border-1 border-[#76947A]/70 focus:h-full  h-full join-item bg-darkgreen border-0 shadow-none`} type = "submit">Join</button>
+                                        <button className={`btn border-1 border-[#76947A]/70 focus:h-full  h-full join-item bg-darkgreen  shadow-none`} type = "submit">Join</button>
                                         </div>
                                 </div>
                             </form>
