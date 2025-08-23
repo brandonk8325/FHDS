@@ -13,7 +13,7 @@ function Donate(){
                 </div>
                 <div className="w-full flex justify-center items-center">
                     <Link to="/ways-to-donate">
-                        <div className="flex flex-row gap-1 md:text-xl lg:text-sm px-15 md:px-0">
+                        <div className="flex flex-row gap-1 md:text-xl lg:text-md px-15 md:px-0">
                             <p className="text-black font-serif " >Click </p><p className="text-blue-800 font-serif underline">here</p><p className="text-black font-serif"> to learn more about other ways to donate</p>
                         </div>
                     </Link>

@@ -61,7 +61,7 @@ function About(){
                 { name: "Erin Kerpel", image: "/static/Erin_Kerpel.jpeg", company: "Gratitude Generation", descriptor: "Vice-President" },
                 { name: "Ryan Geudel", image: "/static/Ryan_Geudel.jpg", company: "CJBS", descriptor: "Treasurer" },
                 { name: "Abhay Kanada", image: "/static/Abhay_Kanada.jpg", company: "Big Ten Network", descriptor: "Director of Technology" },
-                { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "" },
+                { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "Board Member At Large" },
                 ]} 
                 perRow={5} type="about" className="w-full justify-evenly"/>
             </div>
@@ -82,7 +82,7 @@ function About(){
                     "Tom Van Winkle",   "Brittany Eisenberg", "Susie Cutler", "Joe Cohen", "Michele Cochara", "Jordin Jewel", 
                     "Andy Frankel",  "Johnny Guarnieri", "Brian Thibaut", "J.P. Veillon",  "Sheila Collins", "Kelly Cooper", 
                     "Kelly Collins", "Lindsey Petlak", "Chase Rowars",  "Jeff Steybe", "Christine Mihovilovich", "Mike Lee",
-                    "Lisa Curry", "Erika Jones", "Lauren Schwartz", "Dawne Pohlman", "Sue Violet"
+                    "Lisa Curry", "Erika Jones", "Lauren Schwartz", "Dawne Pohlman", "Sue Violet", "Belinda Veillon"
                     ]}
                     rows={isMobile? 18 : 6}
                     cols={isMobile? 2: 6}/>
