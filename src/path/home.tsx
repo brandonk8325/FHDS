@@ -6,8 +6,8 @@ import { ImagePopup } from "../Components/img_button"
 function Home(){
 return(
 <>
-    <div className={`relative lg:bg-[url('/static/main_bg.jpg')] bg-[url('/static/vert_dog.jpeg')] bg-cover bg-center lg:h-screen h-150 w-full
-      before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#08415c]/20 before:to-[#1c110a]/80  md:before:from-[#08415c]/50  md:before:to-[#1c110a]/60 before:z-0`}>
+    <div className={`relative sm:bg-[url('/static/main_bg.jpg')] bg-[url('/static/vert_dog.jpeg')] bg-cover bg-center lg:h-screen h-150 w-full
+      before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#08415c]/20 before:to-[#1c110a]/80  sm:before:from-[#08415c]/50  sm:before:to-[#1c110a]/60 before:z-0`}>
       <div className="">
         <div className="fixed top-0 left-0 w-full z-50">
           <Component page = "home"/>

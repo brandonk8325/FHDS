@@ -26,8 +26,8 @@ function About(){
                 <div className='px-5 py-10 md:px-0 md:py-0'>
                     <img className=" w-full md:w-150 rounded-lg " src="/static/About_Us.jpg" alt="image description" />
                 </div>
-                <div className='w-full md:w-150'>
-                    <h3 className="text-3xl text-center font-bold text-black pb-10 pt-10 md:pt-10">About Us</h3>
+                <div className='w-full md:w-150 pb-8'>
+                    <h3 className="text-3xl text-center font-bold text-black pb-10 md:pb-5 pt-10 md:pt-10">About Us</h3>
                     <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few dog sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  We have behaviorists and trainers that will help provide the dogs with skills that will increase their chances of recieving adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they will ever receive in their lives.  We will work with each dog's individual needs in order to ensure that they are thriving and living a beautiful life. </p>
                     <div className="w-full flex flex-col items-center justify-evenly text-center md:text-left">
                             <p className="text-black pt-5 pb-2 font-bold">Stay Updated! Sign up for our newsletter</p>
@@ -116,7 +116,7 @@ function About(){
                 <ComTable names={[
                     "Samantha Kerpel", "Eva Douvlis", "Yoonsey Kim", "Nora Mcclenahan", "Elie Stadelmann",
                     "Brady Knutsen", "Dani Curry",	"Clementine Lincoln", "Gisele Lincoln",	"Dylan Gryll",
-                    "Ellis Platzbecker",	"Arunima Ganguli", "Alexis Rosen"
+                    "Ellis Platzbecker",	"Arunima Ganguli", "Alexis Rosen", "Alexandra Maciel"
                 ]}
                 rows = {isMobile? 7 : 3}
                 cols = {isMobile? 2: 6}/>
