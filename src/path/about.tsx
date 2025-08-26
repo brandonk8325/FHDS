@@ -30,7 +30,7 @@ function About(){
                     <h3 className="text-3xl text-center font-bold text-black pb-10 md:pb-5 pt-10 md:pt-10">About Us</h3>
                     <p className='text-center text-black px-5 md:px-0'>Furever Home Dog Sanctuary (FHDS) is one of the few dog sanctuaries in the Midwest.  A sanctuary differs from shelters or other rescues because it is designed to accommodate dogs for long periods of time.  We have behaviorists and trainers that will help provide the dogs with skills that will increase their chances of recieving adopted.  Until they are adopted, our dogs will have more space, more stimulation, and more socialization than they will ever receive in their lives.  We will work with each dog's individual needs in order to ensure that they are thriving and living a beautiful life. </p>
                     <div className="w-full flex flex-col items-center justify-evenly text-center md:text-left">
-                            <p className="text-black pt-5 pb-2 font-bold">Stay Updated! Sign up for our newsletter</p>
+                            <p className="text-black text-lg pt-5 pb-2 font-bold">Stay Updated! Sign up for our newsletter</p>
                             <form name="newsletter2"
                                 method="POST"
                                 data-netlify="true"
@@ -45,7 +45,7 @@ function About(){
                                         <div>
                                             <label className={`input validator join-item border-1 border-darkgreen  shadow-0 bg-darkgreen/60`}>
                                             <svg className="h-[1em] opacity-100 border-0 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"> <g strokeLinejoin="round" strokeLinecap="round" strokeWidth="2.5" fill="none" stroke="white"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></g> </svg>
-                                            <input name="email" type="email" autoComplete="email" className="placeholder-white/70 focus:outline-none focus:ring-0  border-l-darkgreen border-l-1" placeholder="mail@site.com" required />
+                                            <input name="email" type="email" autoComplete="email" className="placeholder-white/70  focus:outline-none focus:ring-0  border-l-darkgreen border-l-1" placeholder="mail@site.com" required />
                                             </label>
                                             <div className="validator-hint hidden ">Enter valid email address</div>
                                         </div>
@@ -60,7 +60,7 @@ function About(){
             <div className='flex lg:flex-row pb-10 md:py-10 items-center justify-evenly w-full bg-[#f6eee3] md:p-10 md:gap-20 flex-col'>
                 <div className='w-full md:w-150 items-center justify-between'>
                     <h3 className="text-3xl text-center font-bold py-10 text-black">Our Story</h3>
-                    <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with a goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 acres in Richmond, Illinois. We will be working with dogs who have been in shelters for extremely long periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
+                    <p className='text-center text-black px-5 md:px-0'> In 2022, we formed a nonprofit called Furever Home Dog Sanctuary with a goal of creating a place where hope could finally flourish for dogs who need it most. Our mission is to rescue and rehabilitate dogs to improve their quality of life by preparing them to be adopted into their furever home. After searching for land for over a year, we now have 6 beautiful acres in Richmond, Illinois. We will be working with dogs who have been in shelters for prolonged periods or have found themselves on an euthanasia list. While in our care, whether it's months or the rest of their lives, dogs will have more space, increased time for socialization with people and other dogs, time dedicated to work with trainers/behaviorists, and 6 acres of land to enjoy exploring.<br/><br/> - David and Erin Kerpel</p>
                     <div className="-translate-y-3 pt-5 md:pt-10 px-5 md:px-5">
                         <AbtTimeline
                             steps={[
