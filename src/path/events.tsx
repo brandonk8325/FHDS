@@ -38,7 +38,7 @@ function Events() {
             {/* RIGHT */}
             <div className="lg:min-h-0 flex flex-col lg:grid lg:grid-rows-[auto,1fr,auto] items-center">
               <p className="text-black text-lg lg:text-sm text-center pt-5">
-                Please join us to learn about FHDS and hear what we've been up to! There will be games and
+                Please join us on <span className="font-semibold">October 5th</span> to learn about FHDS and hear what we've been up to! There will be games and
                 activities for kids and dogs — including a <span className="font-bold">dog costume contest!!</span>
               </p>
 

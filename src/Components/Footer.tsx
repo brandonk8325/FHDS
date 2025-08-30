@@ -16,8 +16,8 @@ function Footer(){
                             <div className="">
                                 <p className="text-white">Furever Home Dog Sanctuary</p>
                                 <p className="text-white">Richmond, Illinois</p>
-                                <p className={`text-gold brightness-150`}>info@FHDSmail.org</p>
-                                <p className={`text-gold brightness-150`}>+1 773-520-3568</p>
+                                <p className={`text-[#a37521] brightness-150`}>info@FHDSmail.org</p>
+                                <p className={`text-[#a37521] brightness-150`}>+1 773-520-3568</p>
                             </div>
                         </div>
                         <div className="lg:w-150 md:w-full flex justify-start text-center md:text-left">

@@ -22,8 +22,8 @@ return(
           <div className='flex flex-row pt-15'>
             <div className='px-10'>
               <Link to="/donate">
-              <button className={`bg-[#a37521] md:bg-gold inline-flex items-center justify-center mb-2 me-2 overflow-hidden md:text-md font-medium text-white rounded-lg  hover:text-white `}>
-                  <span className={`px-15 md:px-15 py-5 md:py-3 tracking-wider transition-all ease-in duration-175 border-6 md:border-gold border-[#a37521] hover:md:text-2xl text-xl md:text-xl hover:cursor-pointers rounded-lg`}>
+              <button className={`bg-gold md:bg-gold inline-flex items-center justify-center mb-2 me-2 overflow-hidden md:text-md font-medium text-white rounded-lg  hover:text-white `}>
+                  <span className={`px-15 md:px-15 py-5 md:py-3 tracking-wider transition-all ease-in duration-175 border-6 md:border-gold border-gold hover:md:text-2xl text-xl md:text-xl hover:cursor-pointers rounded-lg`}>
                   <p className=" ">Donate</p>
                 </span>
               </button>
@@ -67,7 +67,7 @@ return(
         <p className='text-center text-lg pt-5 pb-10'>Furever Home Dog Sanctuary (FHDS) is a non-profit organization that will provide second chances to dogs in need.  By providing elevated care, behavior modification and increased socialization and stimulation, FHDS will provide dogs who have been overlooked, the opportunity to thrive.  Whether the dogs that we support are on the path to adoption or remain with us long-term, every dog will experience what it means to be cherished and cared for, every single day.</p>
         <Link to="/about" className="">
         <button className={` inline-flex items-center justify-center mb-2 me-2 overflow-hidden text-md font-medium text-white rounded-lg hover:text-white `}>
-          <span className={` px-10 py-5 transition-all ease-in duration-175 bg-[#a37521] hover:cursor-pointer hover:text-lg rounded-lg`}>
+          <span className={` px-10 py-5 transition-all ease-in duration-175 bg-gold hover:cursor-pointer hover:text-lg rounded-lg`}>
             Read More
           </span>
         </button>
