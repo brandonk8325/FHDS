@@ -121,7 +121,7 @@ function About(){
                 rows = {isMobile? 7 : 3}
                 cols = {isMobile? 2: 6}/>
             </div>
-            <p className="text-black pt-5">If you're interested in joining our team, please contact David at david@fureverhomedogsanctuary.org or 773-520-3568</p>
+            <p className="text-black pt-5">If you're interested in joining our team, please contact David at david@fhdsmail.org or 773-520-3568</p>
         </div>
     </>
     )
