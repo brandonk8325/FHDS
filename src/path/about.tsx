@@ -85,9 +85,9 @@ function About(){
                 <CardsGrid cards={
                 [{ name: "David Kerpel", image: "/static/David_Kerpel.jpeg", company: "Law Offices of David S. Kerpel", descriptor: "President" },
                 { name: "Erin Kerpel", image: "/static/Erin_Kerpel.jpeg", company: "Gratitude Generation", descriptor: "Vice-President" },
+                { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "Secretary" },
                 { name: "Ryan Geudel", image: "/static/Ryan_Geudel.jpg", company: "CJBS", descriptor: "Treasurer" },
                 { name: "Abhay Kanada", image: "/static/Abhay_Kanada.jpg", company: "Big Ten Network", descriptor: "Director of Technology" },
-                { name: "Zach Nesbit", image: "/static/Zach_Nesbit.jpg", company: "K9 Resorts", descriptor: "Board Member At Large" },
                 ]}  type="about" className="w-full justify-evenly"/>
             </div>
             <h1 className="text-black text-3xl font-bold">Chair People</h1>
